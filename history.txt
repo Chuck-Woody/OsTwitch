@@ -1,0 +1,1000 @@
+ 1012  rails db:drop 
+ 1013  bundle install 
+ 1014  ./setup_db.sh 
+ 1015  bundle install 
+ 1016  clear
+ 1017  bundle exec rspec spec/models/
+ 1018  bundle exec rspec spec/models/comment_spec.rb 
+ 1019  bundle exec rspec spec/models/user_spec.rb 
+ 1020  bundle exec rspec spec/models/video_spec.rb 
+ 1021  cd ..
+ 1022  cd .. 
+ 1023  ls
+ 1024  cd rails1-practice/
+ 1025  ls
+ 1026  cd active_record_queries/
+ 1027  ls
+ 1028  bundle exec rspec spec/ar_queries_spec.rb 
+ 1029  bundle install 
+ 1030  bundle exec rspec spec/ar_queries_spec.rb 
+ 1031  cd .. 
+ 1032  cd associations
+ 1033  ls
+ 1034  bundle exec rspec spec/models/
+ 1035  bundle install 
+ 1036  ./setup_db.sh 
+ 1037  bundle exec rspec spec/models/
+ 1038  bundle exec rspec spec/models/comment_spec.rb 
+ 1039  cd /home/chuck/App_academy/Rails1_Practice/rails1-practice (1)/rails1-practice/associations/app
+ 1040  cd /home/chuck/App_academy/Rails1_Practice/rails1-practice (1)/rails1-practice/associations
+ 1041  cd App_academy/
+ 1042  cd rails1-practice/
+ 1043  ls
+ 1044  cd rails1-practice/
+ 1045  ls
+ 1046  cd associations/
+ 1047  ls
+ 1048  bundle exec rspec spec/models/
+ 1049  bundle exec rspec spec/models/comment_spec.rb 
+ 1050  cd 
+ 1051  cd App_academy/
+ 1052  cd Rails1_Practice/
+ 1053  ls
+ 1054  cd rails1-practice\ \(1\)/
+ 1055  cd rails1-practice/
+ 1056  cd associations/
+ 1057  bundle exec rspec
+ 1058  bundle exec rspec 
+ 1059  cd .. 
+ 1060  ls
+ 1061  cd rails1-practice/
+ 1062  ls
+ 1063  cd active_record_queries/
+ 1064  bundle exec rspec spec/ar_queries_spec.rb 
+ 1065  rails generate migration CreateComment
+ 1066  rails db:migrate
+ 1067  rails generate migration ChangeUser
+ 1068  rails db:migrate
+ 1069  rails generate migration ChangeVideos
+ 1070  rails db:migrate
+ 1071  rails generate migration ChangeVideos
+ 1072  rails db:migrate
+ 1073  bundle exec annotate --models
+ 1074  cd .. 
+ 1075  cd active_record_queries/
+ 1076  ./setup_db.sh 
+ 1077  cd .. 
+ 1078  cd associations/
+ 1079  bundle exec annotate --models
+ 1080  BUNDLE INSTALL 
+ 1081  bundle install 
+ 1082  rails generate migration CreateComment
+ 1083  bundle exec rails generate migration CreateComment
+ 1084  rails generate migrations CreateComment
+ 1085  rails generate migration CreateComment
+ 1086  cd App_academy/
+ 1087  cd MB/skeleton\ \(7\)/
+ 1088  bundle install 
+ 1089  cd skeleton/
+ 1090  bi 
+ 1091  bundle exec rspec spec/01_queries_spec.rb 
+ 1092  bundle exec annotate --models
+ 1093  bi 
+ 1094  bundle exec annotate --models
+ 1095  bundle exec rspec spec/01_queries_spec.rb 
+ 1096  ./setup
+ 1097  bundle exec rspec spec/01_queries_spec.rb 
+ 1098  bundle exec rspec spec/02_queries_spec.rb 
+ 1099  bundle exec rspec spec/03_queries_spec.rb 
+ 1100  pry 
+ 1101  rails generate migrations CreateReview
+ 1102  rails generate migration CreateReview
+ 1103  rail db:migrate
+ 1104  rails db:migrate
+ 1105  rails generate migration ChangeUserColumns
+ 1106  rails db:migrate
+ 1107  rails generate migration ChangeResturantTableColumns
+ 1108  rails db:migrate
+ 1109  cd ..
+ 1110  cd associations/
+ 1111  bundle install 
+ 1112  ./setup_db.sh 
+ 1113  bundle exec rspec
+ 1114  bundle install 
+ 1115  ./setup_db.sh
+ 1116  sqlite3
+ 1117  install postman 
+ 1118  cd ..
+ 1119  postman install 
+ 1120  snap install postman 
+ 1121  postman
+ 1122  bin rails routes
+ 1123  bin/rails routes
+ 1124  rails routes
+ 1125  bin/rails generate model Article title:string text:text
+ 1126  rails db:migrate:status
+ 1127  bin/rails db:migrate
+ 1128  bin/rails db:migrate:status
+ 1129  sqlite
+ 1130  sqlite3
+ 1131  bin/rails db:create
+ 1132  bin/rails db:migrate
+ 1133  sqlite3 db/test
+ 1134  sqlite3
+ 1135  rake db:create
+ 1136  sqlite3 'db/development.sqlite3'
+ 1137  bin/rails routes
+ 1138  sqlite3 'db/development.sqlite3'
+ 1139  bundle exec rake routes
+ 1140  pry
+ 1141  rails db:migrate:status
+ 1142  rails routes
+ 1143  bi
+ 1144  bundle update binding_of_caller
+ 1145  bundle update better_errors
+ 1146  bundle install 
+ 1147  bi
+ 1148  bundle info binding_of_caller
+ 1149  bundle install 
+ 1150  cd App_academy/
+ 1151  ls
+ 1152  cd .. 
+ 1153  cd blog/
+ 1154  rails s
+ 1155  bundle install 
+ 1156  cd rails_olympics_production_A_skeleton\ 3/
+ 1157  bi 
+ 1158  ls
+ 1159  cd build_rails_project/
+ 1160  bi
+ 1161  ls
+ 1162  cd BlogApp/
+ 1163  bi
+ 1164  bundle exec rspec
+ 1165  bundle exec rspec spec/
+ 1166  bundle install 
+ 1167  bundle exec rspec
+ 1168  bundle exec rspec spec/models/user_spec.rb 
+ 1169  bundle install 
+ 1170  cd ..
+ 1171  ls
+ 1172  cd BlogApp/
+ 1173  bi
+ 1174  ber
+ 1175  bundle exec rails db:create
+ 1176  ber
+ 1177  rails g model CreateUser email:string
+ 1178  ber spec/models/blog_spec.rb 
+ 1179  rails db:migrate RAILS_ENV=text
+ 1180  rails db:migrate RAILS_ENV=test
+ 1181  ber spec/models/blog_spec.rb 
+ 1182  rails g model User email:string
+ 1183  rails db:migrate:status
+ 1184  bundle exec rails db:migrate db:test:load
+ 1185  ber
+ 1186  ber spec/models/user_spec.rb 
+ 1187  rails g model Blog
+ 1188  bundle exec rails db:migrate db:test:load
+ 1189  bundle exec annotate --models
+ 1190  bi
+ 1191  bundle exec annotate --models
+ 1192  rails g model Comment body:text author_id:integer
+ 1193  bundle exec rails db:migrate db:test:load
+ 1194  bundle exec annotate --models
+ 1195  rails g migrate AddBlogIdToComments
+ 1196  rails g migration AddBlogIdToComments
+ 1197  bundle exec rails db:migrate db:test:load
+ 1198  bundle exec annoate --models
+ 1199  bundle exec annotate --models
+ 1200  rails g controller Blogs
+ 1201  rails g controller Comments
+ 1202  rails g controller Users
+ 1203  git clone https://github.com/Chuck-Woody/hw-activerecord-practice
+ 1204  bundle exec rspec
+ 1205  bi
+ 1206  cd cd-create-profile
+ 1207  ls
+ 1208  cd hw-activerecord-practice/
+ 1209  ls
+ 1210  bi
+ 1211  i
+ 1212  bi
+ 1213  ber
+ 1214  cd Rails\ Olympics/
+ 1215  lsd
+ 1216  ls
+ 1217  code . 
+ 1218  cd rails_olympics_production_A_skeleton\ 3/build_rails_project/BlogApp/
+ 1219  ber spec/models/user_spec.rb 
+ 1220  ber spec/models/
+ 1221  ber spec/models/user_spec.rb 
+ 1222  ber spec/models/blog_spec.rb 
+ 1223  ber spec/models/comment_spec.rb 
+ 1224  ber spec/models/blog_spec.rb 
+ 1225  ber spec/models/comment_spec.rb 
+ 1226  ber spec/models/blog_spec.rb 
+ 1227  ber spec/models/user_spec.rb 
+ 1228  bundle exec rspec spec/controllers/
+ 1229  bundle exec rspec spec/controllers/
+ 1230  bundle exec rspec spec/controllers/comments_controller_spec.rb 
+ 1231  bundle exec rspec spec/controllers/users_controller_spec.rb 
+ 1232  cd blog/
+ 1233  ls
+ 1234  rails routes
+ 1235  rails s
+ 1236  rails s 
+ 1237  rails s
+ 1238  rails db:create
+ 1239  bundle exec rails db:create
+ 1240  cd MusicApp/
+ 1241  rails db:create
+ 1242  rails db:migrate
+ 1243  rails generate controller users
+ 1244  rails s
+ 1245  rails
+ 1246  rails s
+ 1247  ping
+ 1248  ping .
+ 1249  ipconfig
+ 1250  host
+ 1251  who
+ 1252  ls 
+ 1253  git clone https://github.com/Chuck-Woody/W7D1
+ 1254  cd W7D1/
+ 1255  rails s
+ 1256  ls
+ 1257  cd CatsAuth/
+ 1258  rails s
+ 1259  bi 
+ 1260  rails s 
+ 1261  code . 
+ 1262  rails db:create
+ 1263  rails db:migrate
+ 1264  rails db:seed
+ 1265  cd .. 
+ 1266  ls
+ 1267  cd .. 
+ 1268  ls
+ 1269  git clone https://github.com/Chuck-Woody/W7D2.git
+ 1270  cd W7D2
+ 1271  ls
+ 1272  bundle exec rails new MusicApp -G --database=postgresql
+ 1273  code . 
+ 1274  bi
+ 1275  cd MusicApp/
+ 1276  ls
+ 1277  bi
+ 1278  clear
+ 1279  bundle exec rails g model User email:string password_digest:string session_token:string
+ 1280  bi 
+ 1281  rails c
+ 1282  rails g controller sessions :index
+ 1283  rails routes
+ 1284  raisl routes
+ 1285  ls
+ 1286  rails routes
+ 1287  rake routes
+ 1288  rails routes
+ 1289  bundle install 
+ 1290  bundle exec rails generate model user username:string session_token:string password_digest:string
+ 1291  bundle exec rails generate model goals name:string details:string status:boolean user_id:integer
+ 1292  rails db:create
+ 1293  bundle exec rails db:migrate db:test:load
+ 1294  rails db:migrate:status
+ 1295  bundle exec rails db:migrate db:test:load
+ 1296  bundle exec annotate --models
+ 1297  rails c 
+ 1298  bundle exec rspec spec/models/user_spec.rb 
+ 1299  pry
+ 1300  bundle exec rspec spec/models/user_spec.rb 
+ 1301  bundle exec rspec spec/models/goal_spec.rb 
+ 1302  bundle exec rspec spec/models/user_spec.rb 
+ 1303  bundle exec rspec spec/controllers/
+ 1304  rails g controller users
+ 1305  rails g controller goals
+ 1306  bundle exec rspec spec/controllers/
+ 1307  rails g controller sessions
+ 1308  bundle exec rspec spec/controllers/
+ 1309  rails routes
+ 1310  bundle exec rails spec/
+ 1311  clear
+ 1312  rails routes
+ 1313  ls 
+ 1314  code .
+ 1315  bundle exec rspec spec/models/user_spec.rb 
+ 1316  bundle exec rspec spec/controllers/
+ 1317  clear
+ 1318  bundle exec rspec spec/controllers/
+ 1319  bundle exec rspec spec/features
+ 1320  bundle exec rspec spec
+ 1321  clear
+ 1322  bundle exec rspect spec/models/user_spec.rb 
+ 1323  bundle exec rspec spec/models/user_spec.rb 
+ 1324  bundle exec rspec spec/controllers/users_controller_spec.rb 
+ 1325  bundle exec rspec spec/controllers/application_controller_spec.rb 
+ 1326  bundle exec rspec spec/controllers/users_controller_spec.rb 
+ 1327  bundle exec rspec spec/controllers/sessions_controller_spec.rb 
+ 1328  bundle exec rspec spec/controllers/goals_controller_spec.rb 
+ 1329  cd .. 
+ 1330  cd 
+ 1331  mkdir W7D4
+ 1332  echo "# W7D2" >> README.md
+ 1333  git init
+ 1334  git add README.md
+ 1335  git commit -m "first commit"
+ 1336  git branch -M main
+ 1337  git remote add origin https://github.com/Chuck-Woody/W7D2.git
+ 1338  git push -u origin main
+ 1339  ls -a
+ 1340  rm .git
+ 1341  rm -rf .git
+ 1342  ls
+ 1343  cd W7D4
+ 1344  ls
+ 1345  git add readme.md
+ 1346  git init 
+ 1347  git add readme.md
+ 1348  ls
+ 1349  d .. 
+ 1350  cd .. 
+ 1351  git clone https://github.com/Chuck-Woody/W7D4.git
+ 1352  rm -rf W7D4
+ 1353  git clone https://github.com/Chuck-Woody/W7D4.git
+ 1354  cd W7D4
+ 1355  code . 
+ 1356  clear
+ 1357  cd .. 
+ 1358  bundle install 
+ 1359  bundle exec rails db:create
+ 1360  dropdb user_goal_app_development 
+ 1361  dropdb user_goal_app_test 
+ 1362  rails db:create
+ 1363  rails g model user username:string session_token:string password_digest:string
+ 1364  rails g model goals name:string details:string status:boolean user_id:integer
+ 1365  rails db:migrate
+ 1366  bundle exec annotate --models
+ 1367  rails g controller users
+ 1368  rails g controller goals
+ 1369  rails g controller sessions
+ 1370  rails routes
+ 1371  ls
+ 1372  code . 
+ 1373  bundle exec rspec spec/
+ 1374  bundle exec rspec spec/models/user_spec.rb 
+ 1375  bundle exec rspec spec/models/goal_spec.rb 
+ 1376  bundle exec rspec spec/controllers/
+ 1377  bundle exec rspec spec/controllers/users_controller_spec.rb 
+ 1378  bundle exec rspec spec/controllers/users_controller_spec.rb 
+ 1379  bundle exec rspec spec/controllers/sessions_controller_spec.rb 
+ 1380  bundle exec rspec spec/controllers/
+ 1381  bundle exec rspec spec/controllers/goals_controller_spec.rb 
+ 1382  rails s 
+ 1383  bundle exec rspec spec/controllers/goals_controller_spec.rb 
+ 1384  rails routes
+ 1385  bundle exec rspec spec/controllers/goals_controller_spec.rb 
+ 1386  code . 
+ 1387  bundle exec rspec spec/models/user_spec.rb 
+ 1388  bundle exec rspec spec/models/goal_spec.rb 
+ 1389  bundle exec rspec spec/controllers/users_controller_spec.rb 
+ 1390  bundle exec rspec spec/controllers/sessions_controller_spec.rb 
+ 1391  bundle exec rspec spec/controllers/goals_controller_spec.rb 
+ 1392  bundle exec rspec spec/views/
+ 1393  bundle exec rspec spec/views/users/index.html.erb_spec.rb 
+ 1394  lear
+ 1395  claer
+ 1396  clear
+ 1397  claer
+ 1398  clear
+ 1399  bundle exec rspec spec/views/users/index.html.erb_spec.rb 
+ 1400  bundle exec rspec
+ 1401  bundle exec rspec spec/features/auth_spec.rb 
+ 1402  bundle exec rspec spec/views/
+ 1403  bundle exec rspec spec/features/auth_spec.rb 
+ 1404  bundle exec rspec
+ 1405  bundle exec rspec spec/features/auth_spec.rb 
+ 1406  bundle exec rspec
+ 1407  bundle exec rspec spec/views/
+ 1408  bundle exec rspec 
+ 1409  bundle exec rspec spec/features/goals_spec.rb 
+ 1410  clear
+ 1411  bundle install 
+ 1412  rails db:create
+ 1413  rails db:reset
+ 1414  railsdb reset
+ 1415  rails db:create 
+ 1416  bundle install 
+ 1417  cd rails_2_practice_skeleton/
+ 1418  ls
+ 1419  rails db:reset
+ 1420  railsdb reset
+ 1421  rails db:create
+ 1422  bundle install 
+ 1423  rails db:reset
+ 1424  rails g model User username:string session_token:string password_digest:string
+ 1425  rails g model Goal name:string details:string status:boolean user_id:integer
+ 1426  bundle exec rails db:migrate db:test:load
+ 1427  bundle exec annotate --models
+ 1428  bundle exec rspec spec/models/user_spec.rb 
+ 1429  rails g controller users
+ 1430  rails g controller sessions
+ 1431  rails g controller goals
+ 1432  rails routes
+ 1433  rails s 
+ 1434  bundle exec rails db:migrate db:test:load
+ 1435  rails g controller users
+ 1436  rails g controller sessions
+ 1437  rails g controller goals
+ 1438  rails routes
+ 1439  bundle exec annotate --models
+ 1440  rails routes
+ 1441  bundle exec annotate --models
+ 1442  rails g migration changeGoals
+ 1443  rails db:migrate
+ 1444  rails g migration AddUserIdToGoals
+ 1445  rails db:migrate
+ 1446  rails g migration AddIndexToGoals
+ 1447  rails db:migrate
+ 1448  rails routes
+ 1449  ls
+ 1450  code . 
+ 1451  rails db:reset
+ 1452  bundle install 
+ 1453  rails db:reset
+ 1454  rails g model users username:string session_token:string password_digest:string
+ 1455  rails g goal name:string details:string user_id:integer status:boolean
+ 1456  rails g model goal name:string details:string user_id:integer status:boolean
+ 1457  bundle exec rspec spec/models/user_spec.rb 
+ 1458  bundle exec rspec spec/models/goal_spec.rb 
+ 1459  bundle exec rspec spec/controllers/users_controller_spec.rb 
+ 1460  bundle exec rspec spec/controllers/sessions_controller_spec.rb 
+ 1461  bundle exec rspec spec/controllers/goals_controller_spec.rb
+ 1462  bundle exec rspec spec/views/users/index.html.erb_spec.rb 
+ 1463  bundle exec rspec spec/features/auth_spec.rb 
+ 1464  bundle exec rspec spec/features/auth_spec.rb 
+ 1465  bundle exec rspec spec/features/goals_spec.rb 
+ 1466  bundle exec rspec
+ 1467  bundle exec rspec spec/features/goals_spec.rb 
+ 1468  bundle exec rspec
+ 1469  bundle exec rspec spec/controllers/users_controller_spec.rb 
+ 1470  bundle exec rspec spec/features/goals_spec.rb 
+ 1471  clear
+ 1472  bundle exec rspec spec/features/goals_spec.rb 
+ 1473  bundle exec rspec
+ 1474  bundle exec rspec spec/features/goals_spec.rb 
+ 1475  bundle exec rspec
+ 1476  bundle exec rspec spec/controllers/goals_controller_spec.rb 
+ 1477  bundle exec rspec
+ 1478  bundle exec rspec spec/controllers/goals_controller_spec.rb 
+ 1479  bundle exec rspec spec/features/goals_spec.rb 
+ 1480  code . 
+ 1481  bundle install 
+ 1482  bundle exec rails db:create
+ 1483  ls
+ 1484  clear
+ 1485  bundle exec rspec spec/models/user_spec.rb 
+ 1486  clear
+ 1487  bundle exec rspec spec/models/user_spec.rb 
+ 1488  bundle exec rspec spec/models/poem_spec.rb 
+ 1489  ber spec/controllers/users_controller_spec.rb 
+ 1490  ber spec/controllers/sessions_controller_spec.rb 
+ 1491  ber spec/controllers/poems_controller_spec.rb 
+ 1492  bundle exec rspec
+ 1493  ber spec/views/poems/index.html.
+ 1494  ber spec/features/auth_spec.rb 
+ 1495  ber
+ 1496  ber spec/features/auth_spec.rb 
+ 1497  ber
+ 1498  ber spec/features/auth_spec.rb 
+ 1499  ber spec/features/poems_spec.rb 
+ 1500  ber
+ 1501  ber spec/features/poems_spec.rb 
+ 1502  ber
+ 1503  ber spec/controllers/poems_controller_spec.rb 
+ 1504  ber
+ 1505  ber spec/controllers/poems_controller_spec.
+ 1506  ber
+ 1507  ber spec/features/poems_spec.rb 
+ 1508  rails g model user username:string session_token:string password_digest:string
+ 1509  rails g model poem title:string stanzas:string complete:boolean user_id:integer
+ 1510  rails db:migrate
+ 1511  bundle exec annotate --models
+ 1512  rails g controller users
+ 1513  rails g controller sessions
+ 1514  rails g controller poems
+ 1515  rails routes
+ 1516  man nc
+ 1517  nc example.com 90
+ 1518  nc example.com 80
+ 1519  $ nc example.com 80
+ 1520  GET / HTTP/1.1
+ 1521  Host: example.com
+ 1522  $ nc example.com 80
+ 1523  GET / HTTP/1.1
+ 1524  Host: example.com
+ 1525  $ nc example.com 80
+ 1526  clear
+ 1527  man nc
+ 1528  nc example.com 80
+ 1529  code .
+ 1530  rails s
+ 1531  bundle exec rails s
+ 1532  bundle install 
+ 1533  rails s
+ 1534  bundle exec rack s
+ 1535  rack s
+ 1536  bundle exec ruby bin/p01_basic_server.rb
+ 1537  ls
+ 1538  bundle exec ruby bin/p01_basic_server.rb
+ 1539  touch JS_hmw.js
+ 1540  node JS_hmw.js 
+ 1541  node
+ 1542  node JS_hmw.js 
+ 1543  node
+ 1544  cd .. 
+ 1545  git .clone https://github.com/appacademy/javascript-practice-generator
+ 1546  git clone https://github.com/appacademy/javascript-practice-generator
+ 1547  cd javascript-practice-generator/
+ 1548  ruby practice_test_generateor.rb
+ 1549  ruby practice_test_generator.rb
+ 1550  code . 
+ 1551  open SpecRunner.html
+ 1552  cd practice_assessment/
+ 1553  ls
+ 1554  open SpecRunner.html
+ 1555  ls
+ 1556  cd lib/
+ 1557  open SpecRunner.html
+ 1558  `open SpecRunner.html`
+ 1559  ls
+ 1560  cd jasmine-2.5.2/
+ 1561  ls
+ 1562  node
+ 1563  cd .. 
+ 1564  ls
+ 1565  cd .. 
+ 1566  ls
+ 1567  cd lib/
+ 1568  ls
+ 1569  cd jasmine-2.5.2/
+ 1570  ls
+ 1571  cd .. 
+ 1572  ls
+ 1573  cd src 
+ 1574  ls 
+ 1575  node js_assessment.js 
+ 1576  node
+ 1577  node js_assessment.js 
+ 1578  node practice.html 
+ 1579  ls 
+ 1580  git clone https://github.com/Chuck-Woody/W8D2/tree/main/IntroJavaScriptExercises
+ 1581  ls
+ 1582  git clone https://github.com/Chuck-Woody/W8D2
+ 1583  cd W8D2/
+ 1584  cd IntroJavaScriptExercises/
+ 1585  node practice.js 
+ 1586  node
+ 1587  ls
+ 1588  mkdir javascript_practice
+ 1589  cd javascript_practice/
+ 1590  code . 
+ 1591  cd .. 
+ 1592  ls
+ 1593  mkdir W8D3_hmw
+ 1594  cd *_hmw
+ 1595  ls
+ 1596  code . 
+ 1597  cd .. 
+ 1598  ls
+ 1599  ruby practice_test_generator.rb 
+ 1600  cd practice_assessment/
+ 1601  ls
+ 1602  node
+ 1603  code . 
+ 1604  ruby practice_test_generator.rb 
+ 1605  ls 
+ 1606  cd javascript-practice-generator/
+ 1607  ruby practice
+ 1608  ruby practice_test_generator.rb 
+ 1609  code . 
+ 1610  code .
+ 1611  echo "# Pomwell" >> README.md
+ 1612  git init
+ 1613  git add README.md
+ 1614  git commit -m "first commit"
+ 1615  git branch -M main
+ 1616  git remote add origin https://github.com/Chuck-Woody/Pomwell.git
+ 1617  git push -u origin main
+ 1618  npm run dev 
+ 1619  npm -g install servez
+ 1620  servez . 
+ 1621  npm run test
+ 1622  webpack
+ 1623  git add . 
+ 1624  git commit -m "First commit"
+ 1625  git push
+ 1626  npm init -y 
+ 1627  npm install webpack webpack-cli --save-dev
+ 1628  npm install --save lodash
+ 1629  webpack
+ 1630  npx webpack
+ 1631  npm init -y
+ 1632  npm install @babel/core @babel/preset-env babel-loader core-js css-loader mini-css-extract-plugin regenerator-runtime sass sass-loader webpack webpack-cli
+ 1633  npm webpack 
+ 1634  npx webpack
+ 1635  npm install three
+ 1636  npm run dev 
+ 1637  npm run 
+ 1638  ls -a
+ 1639  which node
+ 1640  npm install @babel/core @babel/preset-env babel-loader core-js css-loader mini-css-extract-plugin regenerator-runtime sass sass-loader webpack webpack-cli
+ 1641  npm init -y
+ 1642  git add . 
+ 1643  git commit -m "First commit"
+ 1644  git puhs 
+ 1645  git push 
+ 1646  code . 
+ 1647  cd .. 
+ 1648  cd 
+ 1649  mkdir test
+ 1650  cd test/
+ 1651  code. 
+ 1652  code . 
+ 1653  code . 
+ 1654  which node
+ 1655  npm init -y
+ 1656  ls
+ 1657  npm install @babel/core @babel/preset-env babel-loader core-js css-loader mini-css-extract-plugin regenerator-runtime sass sass-loader webpack webpack-cli
+ 1658  ls
+ 1659  mkdir Pomwell
+ 1660  code .
+ 1661  npm init @vitejs/app
+ 1662  run dev
+ 1663  npm run dev
+ 1664  cd vite-project/
+ 1665  npm run dev
+ 1666  npm install 
+ 1667  npm run dev
+ 1668  code . 
+ 1669  cd 
+ 1670  cd test/
+ 1671  ls
+ 1672  cd vite-project/
+ 1673  code . 
+ 1674  git clone '
+ 1675  git clone https://github.com/john-smilga/javascript-basic-projects
+ 1676  npm watch
+ 1677  npm run watch 
+ 1678  sudo npm install --save-dev  --unsafe-perm node-sass
+ 1679  npm 
+ 1680  sudo npm install --save-dev  --unsafe-perm node-sass
+ 1681  npm i -D webpack wepack-cli html-webpack-plugin
+ 1682  npm init -y 
+ 1683  npm i three webpack
+ 1684  node_modules/.bin/webpack
+ 1685  npm install @babel/core @babel/preset-env babel-loader core-js css-loader mini-css-extract-plugin regenerator-runtime sass sass-loader webpack webpack-cli
+ 1686  node_modules/.bin/webpack
+ 1687  $ node_modules/.bin/webpack --mode development
+ 1688  git add . 
+ 1689  git commit -m "Finish Three.Js setup environment"
+ 1690  git push 
+ 1691  npm run watch 
+ 1692  git add . 
+ 1693  git commit -m "Add css stylesheet"
+ 1694  git push 
+ 1695  node 
+ 1696  cd src/
+ 1697  node timer.js
+ 1698  ls
+ 1699  node 
+ 1700  node timer.js
+ 1701  node
+ 1702  node timer.js
+ 1703  .exit
+ 1704  node timer.js
+ 1705  jobs
+ 1706  node timer.js
+ 1707  clear
+ 1708  node timer.js
+ 1709  jobs
+ 1710  kill jobs
+ 1711  kill jobs 1 2 3 4 5 6 7 8 9 10
+ 1712  jobs
+ 1713  bg 1 fg
+ 1714  jobs
+ 1715  node timer.js
+ 1716  cd src/
+ 1717  node timer.js
+ 1718  pg -fu
+ 1719  ps -fu
+ 1720  clear
+ 1721  node timer.js
+ 1722  git log 
+ 1723  git reset --hard 0c8a01552160a57d5f4637a80b47754fddacefce
+ 1724  npm run watch 
+ 1725  cd src
+ 1726  npm run watch 
+ 1727  git add . 
+ 1728  ls 
+ 1729  git add --all 
+ 1730  git commit -m "Complete styling of navigation header"
+ 1731  git push 
+ 1732  gid add --all 
+ 1733  git add --all 
+ 1734  git commit -m "Add timer-card css"
+ 1735  git push 
+ 1736  git add . 
+ 1737  git commit -m "finish timer functionality"
+ 1738  git push 
+ 1739  git add . 
+ 1740  git commit -m "Adding progress bar"
+ 1741  git push 
+ 1742  git add . 
+ 1743  git commit -m "Add hover effects to buttons and minor cosmetics"
+ 1744  git push 
+ 1745  npm install --save three
+ 1746  npm install howler
+ 1747  "webpack --watch --mode=development"
+ 1748  webpack cli
+ 1749  npm install -g webpack webpack-cli
+ 1750  nppm run webpack 
+ 1751  webpack
+ 1752  npm install -g webpack webpack-cli
+ 1753  npm run webpack 
+ 1754  code . 
+ 1755  npm run build
+ 1756  git add . 
+ 1757  git commit -m "Build timer project"
+ 1758  git push 
+ 1759  git add . 
+ 1760  git commit "Comment out console.logs"
+ 1761  git commit -m "Comment out console.logs"
+ 1762  git push 
+ 1763  git add . 
+ 1764  git commit 'Update file path to sound file"
+ 1765  git push 
+ 1766  git commit -m 'Update file path to sound file"
+ 1767  git commit 'Update file path to sound file'
+ 1768  git add .
+ 1769  git commit -m "Update file path to sound file"
+ 1770  git push 
+ 1771  git status
+ 1772  git add . 
+ 1773  git commit -m "add proper path for sound resources"
+ 1774  git push 
+ 1775  git add . 
+ 1776  git commit -m "Resources again"
+ 1777  git push 
+ 1778  npm run build
+ 1779  git add . 
+ 1780  git commit -m "Diego helped"
+ 1781  git push 
+ 1782  git add . 
+ 1783  git commit -m "add production readme"
+ 1784  git push 
+ 1785  npm run watch 
+ 1786  npm install -g webpack webpack-cli
+ 1787  webpack --watch --mode=development
+ 1788  cd 
+ 1789  cd Downloads/prototypal_syntax_solution 1.0
+ 1790  cd Downloads/'prototypal_syntax_solution 1.0'
+ 1791  cd prototypal_syntax_solution/
+ 1792  webpack --watch --mode=development
+ 1793  npm webpack 
+ 1794  npm install webpack 
+ 1795  npm webpack --config webpack.config.js
+ 1796  npx webpack --config webpack.config.js
+ 1797  npm run wepack 
+ 1798  npm install webpack webpack-cli --save-dev
+ 1799  node
+ 1800  git add . 
+ 1801  git commit -m "React clock"
+ 1802  git push 
+ 1803  git add . 
+ 1804  git commit -m "Added cool styling"
+ 1805  git push 
+ 1806  code . 
+ 1807  cd .. 
+ 1808  cd 
+ 1809  mkdir W10D5
+ 1810  cd W10D5/
+ 1811  cd .. 
+ 1812  rm -rf W10D5
+ 1813  git clone https://github.com/Chuck-Woody/W10D5.git
+ 1814  cd W10D5
+ 1815  ls
+ 1816  npm init --yes
+ 1817  npm install webpack webpack-cli @babel/core @babel/preset-env @babel/preset-react babel-loader react react-dom
+ 1818  code . 
+ 1819  ls
+ 1820  npm run watch
+ 1821  npm run start
+ 1822  npm run watch
+ 1823  npm run start
+ 1824  git add . 
+ 1825  git commit -m "First commit - rails framework"
+ 1826  git push 
+ 1827  ls 
+ 1828  ls -a 
+ 1829  git clone https://github.com/Chuck-Woody/OsTwitch.git
+ 1830  cd OsTwitch/
+ 1831  rails -v
+ 1832  $ rails new OsTwitch -G --database==postgresql --skip-turbolinks=true
+ 1833  $ rails new OsTwitch -G --database=postgresql --skip-turbolinks=true
+ 1834  rails new OsTwitch -G --database=postgresql --skip-turbolinks=true
+ 1835  ls 
+ 1836  code . 
+ 1837  ls 
+ 1838  cd .. 
+ 1839  rails new testProject -G --database=postgresql --skip-turbolinks=true
+ 1840  cd testProject/
+ 1841  code . 
+ 1842  cd 
+ 1843  cd OsTwitch/
+ 1844  touch .gitignore
+ 1845  code .
+ 1846  cd ~/Downloads/react1-prep-master/skeleton 
+ 1847  npm test frontend/__tests__/react1-test.js 
+ 1848  npm test -- --watchAll
+ 1849  clear
+ 1850  npm test frontend/__tests__/react1-test.js 
+ 1851  npm test frontend/__tests__/post_api_util-test.js
+ 1852  npm test frontend/__tests__/post_actions-test.js 
+ 1853  cd Downloads/
+ 1854  ls 
+ 1855  man ls
+ 1856  ls --sort -t
+ 1857  ls --sort=time
+ 1858  cd react1-prep-master/
+ 1859  ls
+ 1860  cd skeleton
+ 1861  ls
+ 1862  rails s 
+ 1863  npm run build:watch
+ 1864  git clone https://github.com/appacademy/cohort-resources/tree/02-21-2022/lectures/w12d1-react-router
+ 1865  cd skeleton/
+ 1866  npm install 
+ 1867  bundle install
+ 1868  ber rails db:setup
+ 1869  bundle exec rails db:setup
+ 1870  rails routes
+ 1871  bundle exec rails db:setup
+ 1872  rails routes
+ 1873  cd skeleton/
+ 1874  rails routes
+ 1875  npm test frontend/__tests__/post_api_util-test.js 
+ 1876  cd 
+ 1877  Downloads/
+ 1878  ls
+ 1879  cd Downloads/
+ 1880  ls
+ 1881  cd react1-prep-master/
+ 1882  cd skeleton/
+ 1883  npm test frontend/__tests__/post_api_util-test.js 
+ 1884  npm test frontend/__tests__/post_actions-test.js 
+ 1885  npm test frontend/__tests__/post_actions-test.js
+ 1886  cd skeleton/
+ 1887  npm install 
+ 1888  bundle install 
+ 1889  bundle exec rails db:setup 
+ 1890  npm test
+ 1891  node 
+ 1892  rails routes
+ 1893  node 
+ 1894  npm install redux-logger
+ 1895  rails 
+ 1896  rails routes
+ 1897  code . 
+ 1898  cd skeleton/
+ 1899  npm test frontend/__tests__/post_api_util-test.js 
+ 1900  npm test frontend/__tests__/reducers-test.js 
+ 1901  npm test frontend/__tests__/post_actions-test.js 
+ 1902  npm test frontend/__tests__/post_actions-test.js \
+ 1903  npm test frontend/__tests__/post_actions-test.js 
+ 1904  npm test frontend/__tests__/reducers-test.js 
+ 1905  npm test frontend/__tests__/store-test.js 
+ 1906  npm install logger
+ 1907  npm test frontend/__tests__/store-test.js 
+ 1908  npm test frontend/__tests__/post_index
+ 1909  npm test frontend/__tests__/store-test.js 
+ 1910  npm test frontend/__tests__/post_index-test.js 
+ 1911  npm test frontend/__tests__/post_index_item-test.js 
+ 1912  npm test frontend/__tests__/post_form-test.js
+ 1913  clear
+ 1914  npm test frontend/__tests__/post_form-test.js
+ 1915  rails routes
+ 1916  npm install redux-thunk 
+ 1917  node 
+ 1918  cd skeleton/
+ 1919  code . 
+ 1920  npm install 
+ 1921  bundle install 
+ 1922  bundle exec rails db:setup
+ 1923  npm test frontend/__tests__/react1-test.js 
+ 1924  npm test frontend/__tests__/post_api_util-test.js
+ 1925  npm test frontend/__tests__/post_actions-test.js`
+ 1926  npm test frontend/__tests__/post_actions-test.js
+ 1927  npm test frontend/__tests__/reducers-test.js
+ 1928  npm test frontend/__tests__/store-test.js 
+ 1929  npm test frontend/__tests__/post_index-test.js
+ 1930  npm test frontend/__tests__/post_index_item-test.js
+ 1931  npm run test frontend/__tests__/post_form-test.js
+ 1932  npm run test frontend/__tests__/post_show-test.js
+ 1933  npm run test 
+ 1934  npm run test frontend/__tests__/post_form-test.js
+ 1935  npm run test 
+ 1936  clear
+ 1937  npm run test frontend/__tests__/post_form-test.js
+ 1938  npm run test frontend/__tests__/post_show-test.js
+ 1939  cd skeleton/
+ 1940  rails routes
+ 1941  npm install 
+ 1942  cd skeleton/
+ 1943  npm install 
+ 1944  bundle install 
+ 1945  bundle exec rails db:setup
+ 1946  npm test rails routes
+ 1947  rails s
+ 1948  code . 
+ 1949  ls 
+ 1950  rm -rf solution 
+ 1951  npm test frontend/__tests__/react1-test.js
+ 1952  cd skeleton/
+ 1953  ls
+ 1954  npm test frontend/__tests__/react1-test.js
+ 1955  clear
+ 1956  npm test frontend/__tests__/post_api_util-test.js 
+ 1957  npm test frontend/__tests__/post_actions-test.js
+ 1958  npm test 
+ 1959  npm test frontend/__tests__/reducers-test.js
+ 1960  npm test frontend/__tests__/store-test.js
+ 1961  npm test frontend/__tests__/post_index-test.js
+ 1962  npm run test frontend/__tests__/post_index_item-test.js
+ 1963  npm test frontend/__tests__/post_index-test.js
+ 1964  npm test frontend/__tests__/post_form-test.js
+ 1965  npm test 
+ 1966  clear
+ 1967  npm test frontend/__tests__/post_form-test.js
+ 1968  npm test frontend/__tests__/post_show-test.js
+ 1969  rails routes
+ 1970  cd skeleton/
+ 1971  rails routes
+ 1972  code . 
+ 1973  npm install 
+ 1974  cd skeleton/
+ 1975  npm install 
+ 1976  bundle install 
+ 1977  bundle exec rails db:setup 
+ 1978  clear
+ 1979  npm install frontend/__tests__/react1-test.js
+ 1980  npm test frontend/__tests__/react1-test.js
+ 1981  npm test frontend/__tests__/post_api_util-test.js
+ 1982  npm test frontend/__tests__/post_actions-test.js
+ 1983  npm test frontend/__tests__/reducers-test.js 
+ 1984  npm test frontend/__tests__/store-test.js
+ 1985  npm test frontend/__tests__/post_index-test.js
+ 1986  npm test frontend/__tests__/post_index_item-test.js
+ 1987  npm test frontend/__tests__/post_form-test.js
+ 1988  clear
+ 1989  npm test frontend/__tests__/post_form-test.js
+ 1990  npm test frontend/__tests__/post_show-test.js
+ 1991  rails routes
+ 1992  mv ~/react1_reports_revamped ~/Desktop/
+ 1993  npm install 
+ 1994  npm test 
+ 1995  ls
+ 1996  rails _5.2.3_ new OsTwitch --database=postgresql --skip-turbolinks
+ 1997  cd Desktop/
+ 1998  rails _5.2.3_ new OsTwitch --database=postgresql --skip-turbolinks
+ 1999  cd OsTwitch/
+ 2000  git status
+ 2001  git branch -v
+ 2002  git branch -vv
+ 2003  git status
+ 2004  code . 
+ 2005  git add . 
+ 2006  git commit -m 'Add skeleton'
+ 2007  git remote add origin https://github.com/Chuck-Woody/OsTwitch_.git
+ 2008  git branch -M main
+ 2009  git push -u origin main
+ 2010  git branch 
+ 2011  history >history.txt
