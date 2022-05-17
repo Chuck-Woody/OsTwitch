@@ -12,13 +12,13 @@ class NavBar extends React.Component {
       <div className='nav-bar-container'>
         <div className='nav-bar logo-container'>
           <img className="logo" src={logo} />
-         <span> Browse </span>
+         <div> Browse </div>
        
          <span> About </span>
         </div>
         <div>
           <input type="text" value="search" />
-          <button>Insert Font Awesome Magnifying Glass</button>
+          <button><i className="fas fa-search"></i></button>
         </div>
 
         <div>

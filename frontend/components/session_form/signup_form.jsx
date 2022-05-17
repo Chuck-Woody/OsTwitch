@@ -19,9 +19,11 @@ class SignupForm extends React.Component{
   }
 
   handleSubmit(e) {
+    
     e.preventDefault();
     const user = Object.assign({}, this.state);
     this.props.processForm(user).then(this.props.closeModal);
+    console.log("Sign Up fired")
   }
 
   renderErrors() {
@@ -41,17 +43,19 @@ class SignupForm extends React.Component{
     <div>
       <form onSubmit={this.handleSubmit}>
         <label>Username:
-          <input type="text" value={this.state.username}/>
+          <input type="text" value={this.state.username} onChange={this.update('username')}/>
         </label>
         <label>Password:
-          <input type="password" value={this.state.password}/>
+          <input type="password" value={this.state.password} onChange={this.update('password')}/>
         </label>
         <label>Email:
-          <input type="text" value={this.state.email}/>
+          <input type="text" value={this.state.email} onChange={this.update('email')}/>
         </label>
+      <button >Sign Up</button>
       </form>
-      <button>Sign Up</button>
-
+      <div>
+        <h1>{this.renderErrors()}</h1>
+      </div>
     </div>)
   }
 }
