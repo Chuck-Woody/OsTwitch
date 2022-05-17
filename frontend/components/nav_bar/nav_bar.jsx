@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import logo from '../../../app/assets/images/Logo/OsTwitch-logos_transparent.png'
+
 class NavBar extends React.Component {
   constructor(props) {
     super(props)
@@ -21,8 +22,8 @@ class NavBar extends React.Component {
         </div>
 
         <div>
-          <button>Log In</button>
-          <button> Sign Up</button>
+          <button onClick={() => this.props.openModal('login')}>Log In</button>
+          <button onClick={() => this.props.openModal('signup')}> Sign Up</button>
         </div>
       </div>
 
@@ -33,3 +34,8 @@ class NavBar extends React.Component {
 
 
 export default NavBar
+
+
+
+
+

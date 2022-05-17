@@ -9,11 +9,15 @@ function Modal({modal, closeModal}) {
     return null;
   }
   let component;
+  console.log("Right before switch")
   switch (modal) {
     case 'login':
+      console.log("firing login")
       component = <LoginFormContainer />;
       break;
     case 'signup':
+      console.log("firing signup")
+
       component = <SignupFormContainer />;
       break;
     default:
@@ -29,6 +33,7 @@ function Modal({modal, closeModal}) {
 }
 
 const mapStateToProps = state => {
+  console.log("Modal has been loaded")
   return {
     modal: state.ui.modal
   };

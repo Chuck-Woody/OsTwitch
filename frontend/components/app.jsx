@@ -13,6 +13,7 @@ import NavBar from "./nav_bar/nav_bar_container";
 
 const App = () => (
   <div>
+    <Modal /> 
     <NavBar />
 
   </div>

@@ -1,15 +1,13 @@
-import React from 'react';
-import { withRouter } from 'react-router-dom';
+import React from "react";
 
-class SessionForm extends React.Component {
-  constructor(props) {
-    super(props);
+class loginForm extends React.Component {
+  constructor(props){
+    super(props)
     this.state = {
       username: '',
       password: '',
-      email: ''
-    };
-    this.handleSubmit = this.handleSubmit.bind(this);
+    }
+  this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   update(field) {
@@ -38,11 +36,20 @@ class SessionForm extends React.Component {
 
   render() {
     return (
-     <div>
-       
-     </div>
-    );
+    <div>
+      <form onSubmit={this.handleSubmit}>
+        <label>Username:
+          <input type="text" value={this.state.username}/>
+        </label>
+        <label>Password:
+          <input type="password" value={this.state.password}/>
+        </label>
+      </form>
+      <button>Log In</button>
+
+    </div>
+    )
   }
 }
 
-export default withRouter(SessionForm);
+export default loginForm
