@@ -1,8 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import {signup} from './actions/session'
+import {signup} from './actions/session_actions'
 import configureStore from './store/store'
-
+import Root from './components/root'
 
 document.addEventListener("DOMContentLoaded", () => {
   let root = document.getElementById("root")
@@ -10,6 +10,6 @@ document.addEventListener("DOMContentLoaded", () => {
   window.store = store
   window.signup = signup
  console.log(root)
-  ReactDOM.render(<h1> Under Construction - Come Back Soon!</h1>,root)
+  ReactDOM.render(<Root store={store} />,root)
 
 })
