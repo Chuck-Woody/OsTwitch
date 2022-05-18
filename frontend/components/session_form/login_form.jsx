@@ -1,5 +1,5 @@
 import React from "react";
-
+import logo from  '../../../app/assets/images/Logo/OsTwitch-logos_transparent.png'
 class loginForm extends React.Component {
   constructor(props){
     super(props)
@@ -35,18 +35,32 @@ class loginForm extends React.Component {
   }
 
   render() {
+    
+    let errorBox = null;
+    if (this.props.errors.length > 0 ) {
+      errorBox = <div className="ErrorBox">{this.renderErrors()}</div>
+    }
     return (
-    <div>
-      <form onSubmit={this.handleSubmit}>
-        <label>Username:
-          <input type="text" value={this.state.username} onChange={this.update('username')}/>
-        </label>
-        <label>Password:
-          <input type="password" value={this.state.password} onChange={this.update('password')}/>
-        </label>
+    <div >
+      <form onSubmit={this.handleSubmit} className="modal-form-background">
+        <div className='modal-logo-container'>
+          <div className='modal-logo-wrapper'>
+            <img className="modal logo" src={logo} />
+          </div>
+          <div className="modal-login-splash-wrapper">
+            <div className="modal-login-splash"> Log in to OsTwitch </div>
+          </div>
+          <button className="nav-bar-signup-btn" onClick={() => this.props.openModal('signup')}> Sign Up</button>
+          {errorBox}
+        </div>
+        <label>Username:</label>
+        <input type="text" value={this.state.username} onChange={this.update('username')}/>
+        
+        <label>Password:</label>
+        <input type="password" value={this.state.password} onChange={this.update('password')}/>
+        
       <button>Log In</button>
       </form>
-      <h1>{this.renderErrors()}</h1>
     </div>
     )
   }

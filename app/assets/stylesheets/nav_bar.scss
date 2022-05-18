@@ -92,4 +92,53 @@
 
 .modal-initiation-button-wrapper {
   display: inline-flex;
+  gap: 5px;
+  margin-right: 20px;
+  justify-content: space-around;
+}
+
+.nav-bar-login-btn {
+  background: #f2f2f2;
+  color:#2c2c2e;
+  font-size: 13px;
+  font-weight: bold;
+  font-family: "Inter","Roobert","Helvetica Neue",Helvetica,Arial,sans-serif;
+  height: 30px;
+  width: auto;
+  border: none;
+  border-radius: 6px;
+}
+
+.nav-bar-logout-btn {
+  background: #f2f2f2;
+  color:#2c2c2e;
+  font-size: 13px;
+  font-weight: bold;
+  font-family: "Inter","Roobert","Helvetica Neue",Helvetica,Arial,sans-serif;
+  height: 30px;
+  width: auto;
+  border: none;
+  border-radius: 6px;
+}
+
+.nav-bar-signup-btn {
+  background: #772ce8;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: bold;
+  font-family: "Inter","Roobert","Helvetica Neue",Helvetica,Arial,sans-serif;
+  height: 30px;
+  width: auto;
+  border: none;
+  border-radius: 6px;
+
+}
+.nav-bar-signup-btn:hover {
+  background: #300c67;
+  color: #ffffff
+}
+
+.nav-bar-login:hover {
+  background: #adadb8;
+  color:#2c2c2e;
 }

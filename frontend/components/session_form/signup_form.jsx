@@ -1,4 +1,5 @@
 import React from "react";
+import logo from  '../../../app/assets/images/Logo/OsTwitch-logos_transparent.png'
 
 
 class SignupForm extends React.Component{
@@ -41,16 +42,20 @@ class SignupForm extends React.Component{
   render() {
     return (
     <div>
-      <form onSubmit={this.handleSubmit}>
-        <label>Username:
+
+      
+      <form onSubmit={this.handleSubmit} className="modal-form-background">
+        <div className='modal-logo-container'>
+          <img className="modal logo" src={logo} />
+          <div className="modal-signup-splash"> Sign in to OsTwitch </div>
+        </div>
+        <label>Username:</label>
           <input type="text" value={this.state.username} onChange={this.update('username')}/>
-        </label>
-        <label>Password:
+        <label>Password:</label>
           <input type="password" value={this.state.password} onChange={this.update('password')}/>
-        </label>
-        <label>Email:
+        <label>Email:</label>
           <input type="text" value={this.state.email} onChange={this.update('email')}/>
-        </label>
+        
       <button >Sign Up</button>
       </form>
       <div>

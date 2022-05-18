@@ -16,7 +16,7 @@ const App = () => (
   
     <Modal /> 
     <NavBar />
-    <div class="body"> 
+    <div className="body"> 
       Body PlaceHolder
     </div>
   </>

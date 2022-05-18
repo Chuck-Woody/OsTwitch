@@ -3,9 +3,13 @@ import NavBar from './nav_bar'
 import {logout} from '../../actions/session_actions';
 import {openModal} from '../../actions/modal_actions'
 
-const mSTP = (session,ownProps) => ({
-  currentUser: session.currentUser
-})
+const mSTP = (state,ownProps) => {
+  console.log("CurrentUser" , state.session.currentUser)
+  console.log('OwnProps',ownProps)
+return ({
+  currentUser: state.session.currentUser
+})}
+
 
 
 const mDTP = (dispatch) => ({
