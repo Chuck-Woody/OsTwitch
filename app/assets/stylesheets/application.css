@@ -13,22 +13,10 @@
  *= require_tree .
  *= require_self
  */
- .logo {
-   width: 200px;
-   height: 200px;
-   padding: 0;
- }
+ 
 
- .nav-bar-container {
-   display: flex;
-   flex-direction: row;
-   justify-content: space-between;
-   align-items: center;
- }
+ /* .body {
+   background: #efeff1; */
+   
+ /* } */
 
- .nav-bar.logo-container {
-   display: flex;
-   flex-direction: row;
-   justify-content: space-between;
-   align-content: center;
- }

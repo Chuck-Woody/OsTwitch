@@ -1,0 +1,95 @@
+
+
+.logo {
+  box-sizing: border-box;
+  width: 100px;
+  height: 23px;
+  padding: 0;
+}
+
+.nav {
+  font-family: "Inter","Roobert","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.nav-browse {
+  font-weight: bold;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.nav-bar-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  border: 0;
+  margin: -9;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.9)
+  
+}
+
+.nav-about {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.nav-search-bar-container {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+}
+.nav-search-input {
+  width: 351px;
+  height: 34px;
+  font-size: 0.9rem;
+  padding-left: 5px;
+  background: #e5e5e5;
+  color: #444444;
+  border: none;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+.nav-search-button-icon {
+  width: 24;
+  height: 24;
+  
+}
+.nav-search-bar-button-wrapper {
+  display: inline-flex;
+  gap: 1px;
+  
+}
+.nav-search-button {
+  width: 34px;
+  height: 36px;
+  border: none;
+  
+  border-bottom-right-radius: 4px;
+  border-top-right-radius: 4px;
+  background-color: #f2f2f2;
+}
+.nav-bar.logo-container {
+  width: 20%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  
+}
+
+.nav-search-bar-button-wrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.modal-initiation-container {
+  display: flex;
+  justify-content: flex-end;
+  width: 20%;
+}
+
+.modal-initiation-button-wrapper {
+  display: inline-flex;
+}

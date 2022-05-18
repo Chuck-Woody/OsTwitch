@@ -12,11 +12,14 @@ import Modal from './modal/modal'
 import NavBar from "./nav_bar/nav_bar_container";
 
 const App = () => (
-  <div>
+  <>
+  
     <Modal /> 
     <NavBar />
-
-  </div>
+    <div class="body"> 
+      Body PlaceHolder
+    </div>
+  </>
 );
 
 export default App;
