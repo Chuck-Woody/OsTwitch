@@ -1,0 +1,82 @@
+.modal-background {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 6px;
+  z-index: 10;
+}
+
+.modal-child {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal-form-background {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  width: 420px;
+  height:auto;
+}
+
+.modal-login-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.modal-logo-wrapper {
+  display: flex;
+  justify-content: center;
+  height: 40px;
+}
+.modal-login-splash-wrapper {
+  display: flex;
+  justify-content: center;
+}
+.modal-signup-splash-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.modal-signup-splash {
+  font-family: "Inter","Roobert","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: bold;
+  font-size: large;
+}
+
+.modal-login-splash {
+  font-family: "Inter","Roobert","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: bold;
+  font-size: large;
+}
+
+.ErrorBox {
+  display: flex;
+  align-items: center;
+  width: calc(90% - 3px);
+  height: 50px;
+  background-color: #E6E6EA;
+  border: 1.2px solid red;
+  border-radius: 7px;
+  box-shadow: -3px 0 0px 0px red;
+  margin-bottom: 10px;
+  margin-left: 5px;
+}
+
+.modal.logo {
+  box-sizing: border-box;
+  width: 173.91px;
+  height: 40px;
+  padding: 0;
+}
