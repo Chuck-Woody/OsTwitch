@@ -40,27 +40,36 @@ class SignupForm extends React.Component{
   }
 
   render() {
-    return (
-    <div>
+    let errorBox = null;
+    if (this.props.errors.length > 0 ) {
+      errorBox = <div className="ErrorBox">{this.renderErrors()}</div>
+    }
 
-      
+    return (
+      <div >
       <form onSubmit={this.handleSubmit} className="modal-form-background">
         <div className='modal-logo-container'>
-          <img className="modal logo" src={logo} />
-          <div className="modal-signup-splash"> Sign in to OsTwitch </div>
+          <div className='modal-logo-wrapper'>
+            <img className="modal logo" src={logo} />
+          </div>
+          <div className="modal-signup-splash-wrapper">
+            <div className="modal-signup-splash"> Sign up for OsTwitch </div>
+          </div>
+          <button className="nav-bar-login-btn" onClick={() => this.props.openModal('login')}>Log In</button>
+          {errorBox}
         </div>
         <label>Username:</label>
-          <input type="text" value={this.state.username} onChange={this.update('username')}/>
-        <label>Password:</label>
-          <input type="password" value={this.state.password} onChange={this.update('password')}/>
-        <label>Email:</label>
-          <input type="text" value={this.state.email} onChange={this.update('email')}/>
+        <input type="text" value={this.state.username} onChange={this.update('username')}/>
         
-      <button >Sign Up</button>
+        <label>Password:</label>
+        <input type="password" value={this.state.password} onChange={this.update('password')}/>
+
+        <label>Email:</label>
+        <input type="email" value={this.state.email} onChange={this.update('email')}/>
+        
+        
+      <button>Sign Up</button>
       </form>
-      <div>
-        <h1>{this.renderErrors()}</h1>
-      </div>
     </div>)
   }
 }

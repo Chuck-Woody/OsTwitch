@@ -44,9 +44,15 @@
   display: flex;
   justify-content: center;
 }
+.modal-signup-splash-wrapper {
+  display: flex;
+  justify-content: center;
+}
 
 .modal-signup-splash {
-  overflow: hidden;
+  font-family: "Inter","Roobert","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: bold;
+  font-size: large;
 }
 
 .modal-login-splash {
