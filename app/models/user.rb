@@ -24,13 +24,13 @@ class User < ApplicationRecord
   through: :follows,
   source: :channel_followed
 
-  # follow a user
+  # follow a channel
   def follow(channel)
-    follows.create( follower_id: channel.id)
+    follows.create( channel_id: channel.id)
   end
-  # unfollow a user
+  # unfollow a channel
   def unfollow(channel)
-    follows.find_by( follower_id: channel.id).destroy
+    follows.find_by( channel_id: channel.id).destroy
   end
   # Returns true if the current user is following the channel
   def following_channel?(channel)

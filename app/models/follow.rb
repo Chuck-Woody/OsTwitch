@@ -1,8 +1,8 @@
 class Follow < ApplicationRecord
 
-  validates :channel_id, :user_id, presence: true 
-  validates :followed_id, uniqueness: { scope: :user_id } # makes sure that you can only follow one channel at a time
-  
+  validates :channel_id, :follower_id, presence: true 
+  validates :follower_id, uniqueness: { scope: :channel_id } # makes sure that you can only follow one channel at a time
+  # may need to swap follower_id and channel_id in line 4
   belongs_to :channel_followed,
   primary_key: :id,
   foreign_key: :channel_id,

@@ -8,22 +8,27 @@
 
 require 'faker'
 
+User.destroy_all
+Channel.destroy_all
+Follow.destroy_all
+ApplicationRecord.connection.reset_pk_sequence!('users')
+ApplicationRecord.connection.reset_pk_sequence!('channels')
+ApplicationRecord.connection.reset_pk_sequence!('follows')
 #generate a base user and channel to confirm follow relationships
-
 User.create!(
   username: "DemoUser",
   password: 123456,
   email: Faker::Internet.email 
 )
-
+puts User.all.first.id
 Channel.create!(
-  owner_id: 1,
-    channel_name: "DemoUser"
+    owner_id: 1,
+    channel_name: "DemoUser",
     channel_description: Faker::Quote.famous_last_words
 )
 
 # generate 10 additional users and channels
-(1..10).each do |id|
+(2..11).each do |id|
   username = Faker::Esport.player + Faker::Creature::Bird.common_family_name
   User.create!(
     username: username,
@@ -32,10 +37,26 @@ Channel.create!(
   )
   Channel.create!(
     owner_id: id,
-    channel_name: username
+    channel_name: username,
     channel_description: Faker::Quote.famous_last_words
   )
 end
 
 
 #Have the additional users follow the DemoUser
+
+users = User.all
+demoUser = users.first
+
+# the 5 users that the demo user is following
+following = users[1..-1].sample(5)
+# the 5 users that follow the demo user
+followers =  users[1..-1].sample(5)
+
+following.each do |followed| 
+  demoUser.follow(followed.channel)
+end
+
+followers.each do |follower|
+  follower.follow(demoUser.channel)
+end
