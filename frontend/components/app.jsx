@@ -15,7 +15,7 @@ const App = () => (
   <div>
     <Modal /> 
     <NavBar />
-
+    
     <Switch>
       <Route to="/" component={HomePage} />
       <Redirect to="/" />

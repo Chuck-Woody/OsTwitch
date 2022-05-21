@@ -24,6 +24,19 @@ class User < ApplicationRecord
   through: :follows,
   source: :channel_followed
 
+  # follow a user
+  def follow(channel)
+    follows.create( follower_id: channel.id)
+  end
+  # unfollow a user
+  def unfollow(channel)
+    follows.find_by( follower_id: channel.id).destroy
+  end
+  # Returns true if the current user is following the channel
+  def following_channel?(channel)
+    follows.include?(channel)
+  end
+
 
   def self.find_by_credentials(username, password)
     user = User.find_by(username: username)
