@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 require 'faker'
-
+# if you want to add temporary profile icons for your site you can use https://robohash.org/
 User.destroy_all
 Channel.destroy_all
 Follow.destroy_all
@@ -20,7 +20,6 @@ User.create!(
   password: 123456,
   email: Faker::Internet.email 
 )
-puts User.all.first.id
 Channel.create!(
     owner_id: 1,
     channel_name: "DemoUser",

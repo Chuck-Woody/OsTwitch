@@ -7,7 +7,7 @@ Rails.application.routes.draw do
     resources :follows, only: [:create, :destroy,:show]
     
   end
-
+  get "/api/user/:user_id/follows", to: "api/follows#index"
   root "static_pages#root"
 end
  
