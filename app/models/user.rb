@@ -8,13 +8,35 @@ class User < ApplicationRecord
 
   after_initialize :ensure_session_token
 
-  has_many :reviews,
-    foreign_key: :author_id
-    
-  has_many :favorites
-  has_many :favorite_benches,
-    through: :favorites,
-    source: :bench
+  # a user has one channel
+  has_one :channel,
+  primary_key: :id,
+  foreign_key: :owner_id,
+  class_name: :Channel
+
+# a user has many follows
+  has_many :follows,
+  primary_key: :id,
+  foreign_key: :follower_id,
+  class_name: :Follow
+
+  has_many :followed_channels,
+  through: :follows,
+  source: :channel_followed
+
+  # follow a channel
+  def follow(channel)
+    follows.create( channel_id: channel.id)
+  end
+  # unfollow a channel
+  def unfollow(channel)
+    follows.find_by( channel_id: channel.id).destroy
+  end
+  # Returns true if the current user is following the channel
+  def following_channel?(channel)
+    follows.include?(channel)
+  end
+
 
   def self.find_by_credentials(username, password)
     user = User.find_by(username: username)
