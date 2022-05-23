@@ -30,7 +30,9 @@ class NavBar extends React.Component {
       <div className='nav nav-bar-container'>
         
         <div className='nav-bar logo-container'>
+          <Link to="/">
           <img className="nav logo" src={logo} />
+          </Link>
          <div className="nav-browse"> Browse </div>
        
          <span className="nav-about"> <i className="fas fa-ellipsis-v"></i> </span>

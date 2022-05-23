@@ -1,0 +1,40 @@
+.understream-container {
+  display: flex;
+  flex-direction: row;
+  width: 69.44vw;
+  height: 10vh;
+}
+
+.understream-channel-logo {
+  width: 64px;
+  border-radius: 100%;
+  border: solid black 1px;
+  height: 64px;
+  object-fit: contain;
+}
+
+.understream-channel-logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.understream-channel-info-container {
+  width: 93%;
+  height: 30px;
+  display: flex;
+  direction: row;
+  justify-content: space-between;
+}
+
+.follow-btn {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+  align-items: center;
+  background: #772ce8;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: bold;
+  font-family: "Inter","Roobert","Helvetica Neue",Helvetica,Arial,sans-serif;
+}

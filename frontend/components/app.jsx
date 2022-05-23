@@ -20,11 +20,10 @@ const App = () => (
     <div  className='left-mid-right'>
       <SideBar />
       <Switch>
-        <Route exact to="/channel/" component={ChannelShow} />
-        <Route exact to="/" component={HomePage} />
-        {/* <Route to="/directory" component={Index} /> */}
+        <Route exact path="/channel/:id" component={ChannelShow} />
+        <Route exact path="/" component={HomePage} />
 
-        <Redirect to="/" />
+        {/* <Redirect to="/" /> */}
       </Switch>
     </div>
    
