@@ -5,7 +5,11 @@ export const updateChannel = channel => (
     data: { channel }
   })
 );
-
+export const getChannels =() => {
+  return $.ajax({
+    url: '/api/channels'
+  })
+}
 export const addChannel = channel => (
   $.ajax({
     method: 'POST',
