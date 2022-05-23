@@ -11,7 +11,7 @@ class SideBar extends React.Component {
   render() {
 
     return (
-      <div className='channel-container' >
+      <div className='left-container channel-container' >
         <div className='channel-header-container'>
           <h2 className='channel-header-text'>Followed Channels</h2>
         </div>
