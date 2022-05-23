@@ -17,6 +17,7 @@ class NavBar extends React.Component {
     if (this.props.currentUser) {
       buttonsLoggedIn = (<div className="modal-initiation-button-wrapper">
         <button className="nav-bar-logout-btn" onClick={() => this.props.logout()}>Log Out</button>
+        {<div> <i className="fas fa-user">{this.props.userInfo.username}</i> </div>}
       </div>)
     } else {
       buttonsLoggedIn = (<div className="modal-initiation-button-wrapper">
@@ -31,9 +32,11 @@ class NavBar extends React.Component {
         
         <div className='nav-bar logo-container'>
           <Link to="/">
-          <img className="nav logo" src={logo} />
+            <img className="nav logo" src={logo} />
           </Link>
-         <div className="nav-browse"> Browse </div>
+          <Link to="/directory">
+            <div className="nav-browse"> Browse </div>
+          </Link>
        
          <span className="nav-about"> <i className="fas fa-ellipsis-v"></i> </span>
         </div>

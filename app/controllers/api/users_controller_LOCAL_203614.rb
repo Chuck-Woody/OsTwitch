@@ -5,14 +5,10 @@ class Api::UsersController < ApplicationController
 
     if @user.save
       login!(@user)
-<<<<<<< HEAD
       render @user
       @channel = Channel.create({:owner_id => @user.id, :channel_name => @user.username})
-=======
-      render :user # name of the user show page
->>>>>>> User-Auth
     else
-      render json: @user.errors.full_messages, status: 422 # the errors come from the errors generated when the model is validated on a create or update action.
+      render json: @user.errors.full_messages, status: 422
     end
   end
 
