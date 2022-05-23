@@ -10,16 +10,22 @@ import {
 import HomePage from './homepage';
 import Modal from './modal/modal'
 import NavBar from "./nav_bar/nav_bar_container";
+import SideBar from './side_bar/side_bar';
+import ChannelShow from './ChannelShow';
 
 const App = () => (
   <div>
     <Modal /> 
     <NavBar />
-    
-    <Switch>
-      <Route to="/" component={HomePage} />
-      <Redirect to="/" />
-    </Switch>
+    <div  className='left-mid-right'>
+      <SideBar />
+      <Switch>
+        <Route exact path="/channel/:id" component={ChannelShow} />
+        <Route exact path="/" component={HomePage} />
+
+        {/* <Redirect to="/" /> */}
+      </Switch>
+    </div>
    
   </div>
 );

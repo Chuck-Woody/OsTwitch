@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> Follower-FrontEnd
 json.array!(@user.follows) do |follow|
   json.set! follow.id do
     json.follower_id follow.follower_id
