@@ -10,17 +10,17 @@ import {
 import HomeIndex from './HomeIndex/home_index_container';
 import Modal from './modal/modal'
 import NavBar from "./nav_bar/nav_bar_container";
-import SideBar from './side_bar/side_bar';
-import ChannelShow from './ChannelShow';
+import SideBarContainer from './side_bar/side_bar_container';
+import ChannelShowContainer from './channel/channel_show_container';
 
 const App = () => (
   <div>
     <Modal /> 
     <NavBar />
     <div  className='left-mid-right'>
-      <SideBar />
+      <SideBarContainer />
       <Switch>
-        <Route exact path="/channel/:id" component={ChannelShow} />
+        <Route exact path="/channel/:id" component={ChannelShowContainer} />
         <Route exact path="/" component={HomeIndex} />
 
         {/* <Redirect to="/" /> */}

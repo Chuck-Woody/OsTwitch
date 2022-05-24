@@ -1,6 +1,13 @@
 class Api::FollowsController < ApplicationController
 
   def create
+    @follow = Follow.new( channel_id: params[:channel_id], follower_id: current_user.id)
+
+    if @follow.save
+      render :show
+    else
+      render json: @follow.errors.full_messages
+    end
   end
 
   def index

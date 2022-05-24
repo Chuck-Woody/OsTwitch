@@ -8,7 +8,7 @@ class ChannelShow extends React.Component{
   }
 
   render() {
-
+    console.log("Channel Show Props", this.props)
     return (
       <div className="mid-right-container">
         <div className="mid-container">
@@ -22,7 +22,7 @@ class ChannelShow extends React.Component{
             <div className="understream-channel-info-container">
               <div className='understream-channel-name'>Channel Name Placeholder</div>
               <button className='follow-btn'>
-              <i class="far fa-heart"></i>
+              <i className="far fa-heart"></i>
               Follow
               </button>
               {/* <i class="fas fa-heart"></i> if the channel is followed use this heart instead*/}
