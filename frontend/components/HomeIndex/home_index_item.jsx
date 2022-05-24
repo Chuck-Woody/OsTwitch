@@ -1,5 +1,5 @@
 import React from "react";
-
+import {Link} from 'react-router-dom'
 
 class HomeIndexItem extends React.Component {
   constructor(props){
@@ -10,10 +10,11 @@ class HomeIndexItem extends React.Component {
   
   render() {
     console.log(this.props)
-    
-      return (
+    return (
+        
       <div className="home-index-item-container">
-        <Link to={`/channel/${this.props.channel.id}`}>
+
+        
         <div className="home-index-stream-preview">
           
         </div>
@@ -23,16 +24,17 @@ class HomeIndexItem extends React.Component {
             
           </div>
           <div className="home-index-channel-info-container">
-            <div className="home-index-channel-name">
-                {this.props.channel.channel_name}
-            </div>
             <div className="home-index-stream-title">
                 Stream Title
+            </div>
+            <div className="home-index-channel-name">
+                {this.props.channel.channel_name}
             </div>
           </div>
 
         </div>
-        </Link>     </div>
+        </div>
+        
       )
     }
 }
