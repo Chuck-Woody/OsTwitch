@@ -17,3 +17,5 @@ import {
         return state;
     }
   }
+
+  export default channelReducer

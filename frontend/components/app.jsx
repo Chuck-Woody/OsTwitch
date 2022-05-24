@@ -7,7 +7,7 @@ import {
   HashRouter
 } from 'react-router-dom';
 
-import HomePage from './homepage';
+import HomeIndex from './HomeIndex/home_index_container';
 import Modal from './modal/modal'
 import NavBar from "./nav_bar/nav_bar_container";
 import SideBar from './side_bar/side_bar';
@@ -21,7 +21,7 @@ const App = () => (
       <SideBar />
       <Switch>
         <Route exact path="/channel/:id" component={ChannelShow} />
-        <Route exact path="/" component={HomePage} />
+        <Route exact path="/" component={HomeIndex} />
 
         {/* <Redirect to="/" /> */}
       </Switch>

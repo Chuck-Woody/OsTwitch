@@ -5,7 +5,7 @@ export const updateChannel = channel => (
     data: { channel }
   })
 );
-export const getChannels =() => {
+export const fetchChannels =() => {
   return $.ajax({
     url: '/api/channels'
   })

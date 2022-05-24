@@ -9,7 +9,7 @@ class NavBar extends React.Component {
   }
 
   componentDidMount(){
-    console.log("Current User", this.props.currentUser)
+    // console.log("Current User", this.props.currentUser)
   }
 
   render() {

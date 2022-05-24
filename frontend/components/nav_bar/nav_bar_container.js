@@ -5,7 +5,7 @@ import {openModal} from '../../actions/modal_actions'
 
 const mSTP = (state,ownProps) => {
   if (state.currentUser) {console.log("User State Slice" , state.entities.users[state.session.id].username)}
-  console.log("User State Slice" , state.session.id)
+  // console.log("User State Slice" , state.session.id)
   // console.log('OwnProps',ownProps)
 return ({
   currentUser: state.session.currentUserId,

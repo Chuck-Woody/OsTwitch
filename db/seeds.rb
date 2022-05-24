@@ -28,7 +28,8 @@ Channel.create!(
 
 # generate 10 additional users and channels
 (2..11).each do |id|
-  username = Faker::Esport.player + Faker::Creature::Bird.common_family_name
+  username = Faker::Esport.unique.player + Faker::Creature::Bird.common_name
+  username = username.gsub(" ","_")
   User.create!(
     username: username,
     password: 123456,

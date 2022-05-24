@@ -1,0 +1,53 @@
+
+
+.home-index-channel-logo {
+  width: 40px;
+  border-radius: 100%;
+  border: solid black 1px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.home-index-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  
+}
+
+.home-index-item-container {
+  width: 302px;
+  height: 289px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.home-index-under-item-container {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+
+.home-index-channel-info-container{
+  display: flex;
+  flex-direction: column;
+}
+
+.home-index-stream-preview {
+  height: 170px;
+  background: black;
+}
+
+.home-index-channel-name {
+  font-family: Inter, Roobert, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-stretch: 100%;
+  text-transform: capitalize;
+  font-weight: 600;
+  line-height: 16.8px;
+ 
+  text-overflow: ellipsis;
+  text-size-adjust: 100%;
+  vertical-align: baseline;
+}

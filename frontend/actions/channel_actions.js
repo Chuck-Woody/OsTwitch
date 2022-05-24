@@ -13,13 +13,13 @@ export const updateChannel = channel => ({
   channel
 })
 
-export const receiveChannels = (channels) => {
-  type: receiveChannels,
+export const receiveChannels = (channels) => ({
+  type: RECEIVE_CHANNELS,
   channels
-}
+})
 
 
 export const fetchChannels = () => dispatch => {
-  return ChannelAPIUtil.getChannels()
-    .then(channels => dispatch(channels))
+  return ChannelAPIUtil.fetchChannels()
+    .then(channels => dispatch(receiveChannels(channels)))
 }
