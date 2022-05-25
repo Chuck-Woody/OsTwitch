@@ -1,5 +1,5 @@
 import React from "react";
-
+import UnderStream from "./under_stream";
 
 
 class ChannelShow extends React.Component{
@@ -7,27 +7,29 @@ class ChannelShow extends React.Component{
     super(props)
   }
 
+  componentDidMount(){
+    this.props.fetchChannels()
+    console.log("ComponentShow has", this.props.allChannels)
+  }
+
   render() {
-    console.log("Channel Show Props", this.props)
+    
+    console.log("Props in ChannelShow", this.props)
+    let understream = null
+    if (this.props.currentUser) {
+      if (Object.keys(this.props.allChannels).includes(this.props.currentChannel)) {
+        understream = <UnderStream follow={this.props.follow} followedChannels={this.props.followedChannels} unFollow={this.props.unFollow} addFollow={this.props.addFollow} currentChannel= {this.props.currentChannel} channels={this.props.allChannels} current_user={this.props.currentUser} />
+      }} else {
+        understream = <UnderStream openModal={this.props.openModal} current_user={this.props.currentUser} currentChannel= {this.props.currentChannel} channels={this.props.allChannels}/>
+      }
     return (
       <div className="mid-right-container">
         <div className="mid-container">
-          <iframe className='stream-container' 
+          {/* <iframe className='stream-container' 
             src="https://www.youtube.com/embed/tgbNymZ7vqY">
-          </iframe>
-          <div className="understream-container">
-            <div className="understream-channel-logo-container">
-              <img className="understream-channel-logo" src="https://robohash.org/placeholder2.png"></img>
-            </div>
-            <div className="understream-channel-info-container">
-              <div className='understream-channel-name'>Channel Name Placeholder</div>
-              <button className='follow-btn'>
-              <i className="far fa-heart"></i>
-              Follow
-              </button>
-              {/* <i class="fas fa-heart"></i> if the channel is followed use this heart instead*/}
-            </div>
-          </div>
+          </iframe> */}
+          {understream}
+          
         </div>
         <div className="right-container">
           <div className="chat-container">

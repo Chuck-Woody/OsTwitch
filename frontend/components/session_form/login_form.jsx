@@ -8,6 +8,7 @@ class loginForm extends React.Component {
       password: '',
     }
   this.handleSubmit = this.handleSubmit.bind(this);
+  this.demoLogin = this.demoLogin.bind(this)
   }
 
   update(field) {
@@ -33,6 +34,13 @@ class loginForm extends React.Component {
         ))}
       </ul>
     );
+  }
+  demoLogin(e){
+    e.preventDefault()
+    this.props.processForm({username: "DemoUser",
+    password: 123456,
+    email:  "hiroko@padberg.org"}).then(this.props.closeModal)
+
   }
 
   render() {
@@ -61,6 +69,8 @@ class loginForm extends React.Component {
         <input className="form-input" type="password" value={this.state.password} onChange={this.update('password')}/>
         
       <button className="form-button">Log In</button>
+      <button onClick={this.demoLogin} className="form-button">Demo User Log In</button>
+
       </form>
     </div>
     )

@@ -34,7 +34,7 @@ export const addFollow = (channel_id) => dispatch => {
   return FollowAPIUtil.addFollow(channel_id)
     .then(follow => dispatch(receiveFollow(follow)))
 }
-export const unFollow = (follower_id) => dispatch => {
-  return FollowAPIUtil.addFollow(follower_id)
-    .then(follow => dispatch(removeFollow(follow)))
+export const unFollow = (followId) => dispatch => {
+  return FollowAPIUtil.unFollow(followId)
+    .then((follow) => dispatch(removeFollow(follow)))
 }

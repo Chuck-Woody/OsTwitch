@@ -12,3 +12,10 @@ export const addFollow = (channel_id) => (
     data: {channel_id}
   })
 )
+
+export const unFollow = (followId) => (
+  $.ajax({
+    method: 'DELETE',
+    url: `/api/follows/` + followId,
+  })
+)

@@ -4,7 +4,7 @@ import configureStore from './store/store'
 import Root from './components/root'
 import { updateChannel } from './util/channel_api_util'
 import {addFollow, fetchFollows} from './actions/follow_actions'
-import signup from './actions/session_actions'
+import {signup} from './actions/session_actions'
 
 document.addEventListener("DOMContentLoaded", () => {
   let root = document.getElementById("root")
@@ -14,7 +14,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const preloadedState = {
       entities: {
         users: { [window.currentUser.user.id]: window.currentUser.user },
-        channels: window.currentUser.channels
+        channels: window.currentUser.channels,
+        follows: window.currentUser.follows
       },
       session: { currentUserId: window.currentUser.user.id }
     };

@@ -23,6 +23,8 @@ class NavBar extends React.Component {
       buttonsLoggedIn = (<div className="modal-initiation-button-wrapper">
         <button className="nav-bar-login-btn" onClick={() => this.props.openModal('login')}>Log In</button>
         <button className="nav-bar-signup-btn" onClick={() => this.props.openModal('signup')}> Sign Up</button>
+      
+        
       </div>)
      
     }
