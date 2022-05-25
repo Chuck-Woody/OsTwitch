@@ -25,9 +25,9 @@ class ChannelShow extends React.Component{
     return (
       <div className="mid-right-container">
         <div className="mid-container">
-          {/* <iframe className='stream-container' 
+          <iframe className='stream-container' 
             src="https://www.youtube.com/embed/tgbNymZ7vqY">
-          </iframe> */}
+          </iframe>
           {understream}
           
         </div>

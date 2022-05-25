@@ -28,19 +28,47 @@ class UnderStream extends React.Component{
       }
 
     return(
+      <div className="understream-about">
+
+      
       <div className="understream-container">
         
             <div className="understream-channel-logo-container">
-              <img className="understream-channel-logo" src="https://robohash.org/placeholder2.png"></img>
+            <img className="understream-channel-logo" src={`https://robohash.org/${this.props.channels[number].channel_name}.png`}></img>
+
             </div>
-            <div className="understream-channel-info-container">
-              <div className='understream-channel-name'>{this.props.channels[number].channel_name}</div> 
-              
-              {follow}
-              
-              
+            <div className="understream-info-composition">
+
+              <div className="understream-channel-info-container">
+                <div className='understream-channel-name'>{this.props.channels[number].channel_name}</div> 
+                {follow}
+              </div>
+
+              <div className="understream-stream-title">
+                Stream title placeholder
+              </div>
             </div>
-          </div>
+
+      </div>
+            <div className="channel-about-composition">
+              <div className="channel-about-background">
+
+                <div className="about-streamer">
+                    About {this.props.channels[number].channel_name}
+                </div>
+
+                <div className="streamer-follows-number">
+                {this.props.channels[number].followerCount} followers
+                </div>
+
+                <div className="channel-description">
+                {this.props.channels[number].channel_description}
+                </div>
+              </div>
+
+
+            </div>
+    </div>
     )
   }
 }

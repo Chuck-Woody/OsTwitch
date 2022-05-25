@@ -20,7 +20,9 @@ class Channel < ApplicationRecord
   foreign_key: :owner_id,
   class_name: :User
 
-
+  def follower_count
+    self.followers.count
+  end
 
   
 end
