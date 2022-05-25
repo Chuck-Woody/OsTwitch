@@ -55,12 +55,12 @@ class loginForm extends React.Component {
         </div>
       <form onSubmit={this.handleSubmit} className="modal-form" >
         <label>Username:</label>
-        <input type="text" value={this.state.username} onChange={this.update('username')}/>
+        <input className="form-input" type="text" value={this.state.username} onChange={this.update('username')}/>
         
         <label>Password:</label>
-        <input type="password" value={this.state.password} onChange={this.update('password')}/>
+        <input className="form-input" type="password" value={this.state.password} onChange={this.update('password')}/>
         
-      <button>Log In</button>
+      <button className="form-button">Log In</button>
       </form>
     </div>
     )
