@@ -16,7 +16,7 @@
   transform: translate(-50%, -50%);
 }
 
-.modal-form-background {
+.modal-container-background {
   padding-top: 20px;
   padding-bottom: 20px;
   padding-left: 30px;
@@ -26,6 +26,11 @@
   flex-direction: column;
   width: 420px;
   height:auto;
+}
+.modal-form {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .modal-login-container {

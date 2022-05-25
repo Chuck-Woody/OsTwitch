@@ -42,8 +42,7 @@ class loginForm extends React.Component {
       errorBox = <div className="ErrorBox">{this.renderErrors()}</div>
     }
     return (
-    <div >
-      <form onSubmit={this.handleSubmit} className="modal-form-background">
+    <div className="modal-container-background">
         <div className='modal-logo-container'>
           <div className='modal-logo-wrapper'>
             <img className="modal logo" src={logo} />
@@ -54,6 +53,7 @@ class loginForm extends React.Component {
           <button className="nav-bar-signup-btn" onClick={() => this.props.openModal('signup')}> Sign Up</button>
           {errorBox}
         </div>
+      <form onSubmit={this.handleSubmit} className="modal-form" >
         <label>Username:</label>
         <input type="text" value={this.state.username} onChange={this.update('username')}/>
         
