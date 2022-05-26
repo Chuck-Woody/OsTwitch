@@ -1,22 +1,8 @@
 module ApplicationCable
   class Connection < ActionCable::Connection::Base
-    include ApplicationController
-
-    identified_by :message_user
-
-    def connect
-      self.message_user = find_verified_user
+    def current_user
+      @current_user ||= User.find_by(session_token: session[:session_token])
     end
-
-    private
-
-      def find_verified_user
-        if logged_in?
-          current_user
-        else
-          nil
-        end
-      end
 
   end
 end

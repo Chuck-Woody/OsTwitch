@@ -8,7 +8,7 @@ import {signup} from './actions/session_actions'
 import actionCable from 'actioncable'
 
 
-const streamChat={}
+
 
 const cable=actionCable.createConsumer('ws://localhost:3000/cable')
 
