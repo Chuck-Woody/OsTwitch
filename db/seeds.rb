@@ -18,7 +18,7 @@ ApplicationRecord.connection.reset_pk_sequence!('follows')
 User.create!(
   username: "DemoUser",
   password: 123456,
-  email: Faker::Internet.email 
+  email: "DemoUser@email.com"
 )
 Channel.create!(
     owner_id: 1,
