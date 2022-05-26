@@ -7,7 +7,8 @@ class User < ApplicationRecord
   validates :password, length: { minimum: 6 }, allow_nil: true
 
   after_initialize :ensure_session_token
-
+  
+  has_many :messages
   # a user has one channel
   has_one :channel,
   primary_key: :id,

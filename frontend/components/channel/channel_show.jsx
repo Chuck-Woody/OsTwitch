@@ -1,6 +1,6 @@
 import React from "react";
 import UnderStream from "./under_stream";
-
+import StreamChat from './stream_chat'
 
 class ChannelShow extends React.Component{
   constructor(props){
@@ -32,16 +32,9 @@ class ChannelShow extends React.Component{
           
         </div>
         <div className="right-container">
-          <div className="chat-container">
-            <div className="chat-header-container">
-              Stream Chat
-            </div>
-            <div className="chat-body-container"></div>
-            <div className="chat-submit-container">
-              <input className='chat-message-input' type="text" value="Send a message"/>
-              <button className='chat-submit-btn'>Chat</button>
-            </div>
-          </div> 
+          
+            <StreamChat cable={this.props.cable}/>
+          
         </div>
       </div>
     )

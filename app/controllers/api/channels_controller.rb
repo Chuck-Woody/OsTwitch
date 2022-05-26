@@ -7,6 +7,7 @@ class Api::ChannelsController < ApplicationController
 
   def show
     @channel = Channel.find_by(id: params[:id])
+    @messages = Message.all
     render :show
   end
 
