@@ -39,7 +39,7 @@ class loginForm extends React.Component {
     e.preventDefault()
     this.props.processForm({username: "DemoUser",
     password: 123456,
-    email:  "hiroko@padberg.org"}).then(this.props.closeModal)
+    email:  "jesus_shields@prohaska.org"}).then(this.props.closeModal)
 
   }
 
