@@ -10,14 +10,14 @@ class UnderStream extends React.Component{
     if (Object.values(this.props.channels).length === 0 ) {
       return null;
     }
-    console.log("Props in understream", this.props)
-    console.log(this.props.addFollow)
+    // console.log("Props in understream", this.props)
+    // console.log(this.props.addFollow)
     let number;
 
     let follow;
     number = parseInt(this.props.currentChannel)
     
-    console.log(number)
+    // console.log(number)
     if (this.props.current_user !== null) {
       if ( this.props.followedChannels.includes(number) && this.props.current_user !==null) {
         follow = <button className='follow-btn' onClick={() => this.props.unFollow(this.props.follow[0].id)}> <i class="fas fa-heart"></i> Unfollow </button>

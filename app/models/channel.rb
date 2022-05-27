@@ -20,6 +20,16 @@ class Channel < ApplicationRecord
   foreign_key: :owner_id,
   class_name: :User
 
+  has_many :messages,
+  primary_key: :id,
+  foreign_key: :channel_id,
+  class_name: :Message
+
+  has_many :chatters,
+  through: :messages,
+  source: :user
+
+  
   def follower_count
     self.followers.count
   end

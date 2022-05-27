@@ -13,7 +13,7 @@ class HomeIndex extends  React.Component{
   }
   
   render() {
-    console.log("HomeIndex has",this.props)
+    // console.log("HomeIndex has",this.props)
     return (
       <div className='home-index-container'>
         {this.props.channels.map(channel => {

@@ -5,8 +5,11 @@ import Root from './components/root'
 import { updateChannel } from './util/channel_api_util'
 import {addFollow, fetchFollows} from './actions/follow_actions'
 import {signup} from './actions/session_actions'
+import actionCable from 'actioncable'
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => { 
+  const cable=actionCable.createConsumer('ws://localhost:3000/cable')
+
   let root = document.getElementById("root")
   let store;
 
@@ -29,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addFollow = addFollow
   window.updateChannel = updateChannel
   window.fetchFollows = fetchFollows
- console.log(root)
-  ReactDOM.render(<Root store={store} />,root)
+//  console.log(root)
+  ReactDOM.render(<Root store={store} cable={cable} />,root)
 
 })

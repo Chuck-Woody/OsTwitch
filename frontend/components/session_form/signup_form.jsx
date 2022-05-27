@@ -64,11 +64,11 @@ class SignupForm extends React.Component{
         <label>Password:</label>
         <input className="form-input" type="password" value={this.state.password} onChange={this.update('password')}/>
         
-        <label>Password:</label>
+        <label>Email:</label>
         <input className="form-input" type="email" value={this.state.email} onChange={this.update('email')}/>
 
       <button className="form-button">Sign In</button>
-      </form>
+    </form>
     </div>
     
     
