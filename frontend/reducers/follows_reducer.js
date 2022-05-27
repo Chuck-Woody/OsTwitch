@@ -5,7 +5,7 @@ import { RECEIVE_FOLLOWS,RECEIVE_FOLLOW, REMOVE_FOLLOW} from "../actions/follow_
 const followsReducer = (state ={}, action) => {
   Object.freeze(state)
   let newState = Object.assign({},state)
-  console.log("Follow Reducer action:", action)
+  // console.log("Follow Reducer action:", action)
   switch(action.type){
     case RECEIVE_FOLLOWS:
       return action.follows

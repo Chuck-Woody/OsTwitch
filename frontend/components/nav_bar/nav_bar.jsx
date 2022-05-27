@@ -14,10 +14,12 @@ class NavBar extends React.Component {
 
   render() {
     let buttonsLoggedIn = null 
+   
     if (this.props.currentUser) {
       buttonsLoggedIn = (<div className="modal-initiation-button-wrapper">
         <button className="nav-bar-logout-btn" onClick={() => this.props.logout()}>Log Out</button>
-        {<div> <i className="fas fa-user">{this.props.userInfo.username}</i> </div>}
+        <img className="home-index-channel-logo" src={`https://robohash.org/${this.props.userInfo.username}.png`}></img>
+        <div> Welcome {this.props.userInfo.username} </div>
       </div>)
     } else {
       buttonsLoggedIn = (<div className="modal-initiation-button-wrapper">
@@ -36,7 +38,7 @@ class NavBar extends React.Component {
           <Link to="/">
             <img className="nav logo" src={logo} />
           </Link>
-          <Link to="/directory">
+          <Link to="/">
             <div className="nav-browse"> Browse </div>
           </Link>
        

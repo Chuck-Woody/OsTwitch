@@ -8,8 +8,8 @@ import { RECEIVE_FOLLOW,REMOVE_FOLLOW} from '../actions/follow_actions';
 const usersReducer = (state = {}, action) => {
   Object.freeze(state);
   let newState = Object.assign({}, state)
-  console.log("The users reducer's state looks like:",newState)
-  console.log("Action in user reducer", action.follow)
+  // console.log("The users reducer's state looks like:",newState)
+  // console.log("Action in user reducer", action.follow)
   switch(action.type) {
     case RECEIVE_CURRENT_USER:
       return Object.assign({}, state, { [action.data.user.id]: action.data.user });
