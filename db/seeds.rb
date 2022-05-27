@@ -19,6 +19,7 @@ User.create!(
   username: "DemoUser",
   password: 123456,
   email: "demo@email.com"
+  
 )
 Channel.create!(
     owner_id: 1,
