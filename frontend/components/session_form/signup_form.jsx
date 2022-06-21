@@ -54,7 +54,7 @@ class SignupForm extends React.Component{
           <div className="modal-signup-splash-wrapper">
             <div className="modal-signup-splash"> Sign Up for OsTwitch </div>
           </div>
-          <button className="nav-bar-login-btn" onClick={() => this.props.openModal('login')}> Log In</button>
+          <button className="nav-bar-login-btn" onClick={() => {this.props.openModal('login');this.props.clearErrors()}}> Log In</button>
           {errorBox}
         </div>
       <form onSubmit={this.handleSubmit} className="modal-form" >
