@@ -43,8 +43,9 @@ class StreamChat extends React.Component {
     {
       received: (message) => this.props.receiveMessage(message)
     })
-    this.setState({subscription: sub})
+    this.setState({subscription: sub}, () => console.log(this.state.subscription))
     console.log("the sub is", sub)
+    
     console.log(" the cable is",this.props.cable)
     
   }

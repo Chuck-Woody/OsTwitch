@@ -39,7 +39,7 @@ class loginForm extends React.Component {
     e.preventDefault()
     this.props.processForm({username: "DemoUser",
     password: 123456,
-    email:  "jesus_shields@prohaska.org"}).then(this.props.closeModal)
+    email:  "DemoUser@gmail.com"}).then(this.props.closeModal)
 
   }
 
@@ -58,7 +58,7 @@ class loginForm extends React.Component {
           <div className="modal-login-splash-wrapper">
             <div className="modal-login-splash"> Log in to OsTwitch </div>
           </div>
-          <button className="nav-bar-signup-btn" onClick={() => this.props.openModal('signup')}> Sign Up</button>
+          <button className="nav-bar-signup-btn" onClick={() => {this.props.openModal('signup'); this.props.clearErrors()}}> Sign Up</button>
           {errorBox}
         </div>
       <form onSubmit={this.handleSubmit} className="modal-form" >

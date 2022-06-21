@@ -18,7 +18,7 @@ ApplicationRecord.connection.reset_pk_sequence!('follows')
 User.create!(
   username: "DemoUser",
   password: 123456,
-  email: "demo@email.com"
+  email: "DemoUser@gmail.com"
   
 )
 Channel.create!(
