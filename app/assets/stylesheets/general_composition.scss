@@ -1,3 +1,4 @@
+@import './variables.scss';
 
 
 .left-mid-right {
@@ -14,7 +15,7 @@
 .mid-container {
   width:100%;
   max-width: 68.62vw;
-  background: #f7f7f8;
+  background: $off-white;
 }
 .right-container {
   width:18.40vw;

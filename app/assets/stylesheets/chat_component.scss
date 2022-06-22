@@ -1,3 +1,6 @@
+
+@import './variables.scss';
+
 .chat-header-container {
   height: 50px;
   box-sizing: border-box;
@@ -31,8 +34,8 @@
 
   font-size: 0.9rem;
   padding-left: 5px;
-  background: #e5e5e5;
-  color: #444444;
+  background: $cream;
+  color: $dark-grey;
   border: none;
   border-radius: 6px;
 
@@ -40,11 +43,11 @@
 .chat-submit-btn {
   width: 50.05px;
   height: 19.5px;
-  background: #772ce8;
-  color: #ffffff;
+  background: $purple-btn-color;
+  color:$white;
   font-size: 13px;
   font-weight: bold;
-  font-family: "Inter","Roobert","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: $twitch-text;
   height:30px;
   width: auto;
   border: none;

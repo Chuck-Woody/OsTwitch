@@ -1,13 +1,13 @@
-
+@import './variables.scss';
 
 .left-container {
   display: flex;
   flex-direction: column;
-  font-family: Inter, Roobert, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $twitch-text;
   
   width: 12.1%;
   height: 100vh;
-  background: #efeff1;
+  background: $slight-white;
   
 }
 .channel-header-container{
@@ -47,7 +47,7 @@
 .channel-logo{
   width: 30px;
   border-radius: 100%;
-  border: solid black 1px;
+  border: solid $black 1px;
   height: 30px;
   object-fit: contain;
 }
@@ -55,7 +55,7 @@
 
 .channel-name {
   all: unset;
-  font-family: Inter, Roobert, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $twitch-text;
   font-size: 14px;
   font-stretch: 100%;
   font-weight: 600;
@@ -72,5 +72,5 @@
   font-weight: 400;
   line-height: 15.6px;
   
-  color: rgb(83, 83, 95);
+  color: $light-grey;
 }

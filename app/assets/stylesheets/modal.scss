@@ -21,7 +21,7 @@
   padding-bottom: 20px;
   padding-left: 30px;
   padding-right: 30px;
-  background: white;
+  background: $white;
   display: flex;
   flex-direction: column;
   width: 420px;
@@ -32,7 +32,7 @@
   display:flex;
   flex-direction: column;
   align-items: flex-start;
-  font-family: Inter, Roobert, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $twitch-text;
   font-size: 13px;
   font-stretch: 100%;
   font-weight: 700;
@@ -43,9 +43,9 @@
 }
 
 .form-button{
-  color: rgb(255, 255, 255);
-  background-color: rgb(145, 71, 255);
-  font-family: Inter, Roobert, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: $white;
+  background-color: $twitch-light-purple;
+  font-family: $twitch-text;
   font-size: 13px;
   font-stretch: 100%;
   font-weight: 600;
@@ -71,8 +71,8 @@
   height: 30px;
   font-size: 0.9rem;
   padding-left: 5px;
-  background: #e5e5e5;
-  color: #444444;
+  background:$cream;
+  color: $dark-grey;
   border: none;
   border-top-left-radius: 6px;
   border-bottom-left-radius: 6px;
@@ -94,13 +94,13 @@
 }
 
 .modal-signup-splash {
-  font-family: "Inter","Roobert","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: $twitch-text;
   font-weight: bold;
   font-size: large;
 }
 
 .modal-login-splash {
-  font-family: "Inter","Roobert","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: $twitch-text;
   font-weight: bold;
   font-size: large;
 }
@@ -110,10 +110,10 @@
   align-items: center;
   width: calc(90% - 3px);
   height: 50px;
-  background-color: #E6E6EA;
-  border: 1.2px solid red;
+  background-color: $smoky-white;
+  border: 1.2px solid $red;
   border-radius: 7px;
-  box-shadow: -3px 0 0px 0px red;
+  box-shadow: -3px 0 0px 0px $red;
   margin-bottom: 10px;
   margin-left: 5px;
 }
