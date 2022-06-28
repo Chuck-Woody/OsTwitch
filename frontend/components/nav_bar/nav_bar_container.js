@@ -2,6 +2,7 @@ import { connect } from "react-redux";
 import NavBar from './nav_bar'
 import {logout,clearErrors} from '../../actions/session_actions';
 import {openModal} from '../../actions/modal_actions'
+import { openDropDown } from "../../actions/dropdown_action";
 
 const mSTP = (state,ownProps) => {
   if (state.currentUser) {console.log("User State Slice" , state.entities.users[state.session.id].username)}
@@ -18,7 +19,8 @@ const mDTP = (dispatch) => ({
 
   logout: () => dispatch(logout()),
   openModal: modal => dispatch(openModal(modal)),
-  clearErrors: () => dispatch(clearErrors())
+  clearErrors: () => dispatch(clearErrors()),
+  openDropDown: (dropdown) => dispatch(openDropDown(dropdown))
 
 })
 
