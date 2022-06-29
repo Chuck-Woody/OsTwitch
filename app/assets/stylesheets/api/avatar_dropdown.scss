@@ -1,4 +1,4 @@
-@import 'variables.scss';
+@import '../variables.scss';
 
 .avatar-modal-background {
   position: fixed;
@@ -13,7 +13,7 @@
 
 .avatar-modal-child {
   position: fixed;
-  top: 5.2%;
+  top: calc(100% - 945px);
   left: 95%;
   transform: translate(-50%, -50%);
 }
@@ -23,36 +23,40 @@
   width: 10vw;
   box-shadow: 0 1px 2px rgba(0,0,0,0.9)
 }
-.avatar-modal-child li {
-  width: 100%;
-  display: inline-flex;
-  
-}
+
 .darkSlider {
   width: 70%;
   display: inline-flex;
   justify-content: space-around;
-
+  height: 30px;
+  align-items: center;
 }
 
 .dark-slider-toggle-wrapper {
-  
-  width:60px;
+  padding: 4px;
+}
+.dark-slider-toggle-container {
+ 
+  width:35px;
   position: relative;
   display: inline-block;
-  height: 34px;
+  height: 20px;
+  
+  
 }
-.dark-slider-toggle-wrapper input {
+.dark-slider-toggle-container input {
   opacity: 0;
   width: 0;
   height: 0;
 }
 
 .dark-slider {
+  width: 35px;
+  height: 15px;
   position: absolute;
   cursor: pointer;
-  top:0;
-  left: 0;
+  // top:0;
+  // left: 0;
   right: 0;
   bottom: 0;
   background-color: #ccc;
@@ -63,10 +67,12 @@
 .dark-slider:before {
   position: absolute;
   content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
+  
+  height: 11px;
+  width: 11px;
+  top: 1.5px;
+  left: 3px;
+  // bottom: 2.75px;
   background-color: $white;
   -webkit-transition: .4s;
   transition: .4s;
@@ -74,7 +80,7 @@
 }
 
 input:checked + .dark-slider {
-  background-color: $twitch-deep-purple;
+  background-color: $twitch-purple;
 }
 
 input:focus + .dark-slider {
@@ -82,8 +88,34 @@ input:focus + .dark-slider {
 }
 
 input:checked + .dark-slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
+  -webkit-transform: translateX(17px);
+  -ms-transform: translateX(17px);
+  transform: translateX(17px);
+}
+#root > div > div.avatar-modal-background > div > ul > li.avatar-box-underline {
+  display: block;
+  width: auto;
+  border-top: 0.5px solid $dark-grey;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.dark-slider.round {
+  border-radius: 12px;
+  border: 2px solid $black;
 }
 
+.dark-slider.round:before {
+  border-radius: 50%;
+}
+
+.dark-theme-text {
+  font-size: 13px;
+}
+
+  li {
+    
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-around;
+    align-items: center;
+  }

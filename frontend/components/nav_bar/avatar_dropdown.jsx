@@ -12,8 +12,12 @@ function AvatarDropDown(props) {
           <i class="fal fa-moon"></i>
           <DarkThemeSlider />
         </li>
-        <li>
-          Log Out
+        <li id='borderline' className="avatar-box-underline">border</li>
+        <li className='avatar-button-item'>
+          <button className="dropdown-logout">
+            <i class="fas fa-door-open"></i>
+            <span className="logout-text">Log Out</span>
+          </button>
         </li>
       </ul>
     )
@@ -22,8 +26,12 @@ function AvatarDropDown(props) {
     <li>
       <DarkThemeSlider />
     </li>
+    <li className="avatar-box-underline"></li>
     <li>
-      Log In
+      <button className="dropdown-login nav-bar-login">
+        <i class="fas fa-door-open"></i>
+        <span className="login-text">Log In</span>
+      </button>
     </li>
   </ul>)
   }

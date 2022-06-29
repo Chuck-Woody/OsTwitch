@@ -143,3 +143,22 @@
   background: $lighter-grey;
   color:$charcoal;
 }
+
+.dropdown-login {
+  height: inherit;
+  width: 100%;
+  border-radius: 4px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  background: none;
+  border: none;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.login-text {
+  padding-left: 10px;
+}
