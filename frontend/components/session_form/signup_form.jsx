@@ -46,6 +46,8 @@ class SignupForm extends React.Component{
     }
 
     return (
+      <div className={`modal-background ${this.props.modal}`} onClick={this.props.closeModal}>
+      <div className="modal-child" onClick={e => e.stopPropagation()}>
       <div className="modal-container-background">
         <div className='modal-logo-container'>
           <div className='modal-logo-wrapper'>
@@ -70,6 +72,9 @@ class SignupForm extends React.Component{
       <button className="form-button">Sign In</button>
     </form>
     </div>
+    </div>
+    </div>
+
     
     
     )

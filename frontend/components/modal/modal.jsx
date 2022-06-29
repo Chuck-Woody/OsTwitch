@@ -3,9 +3,11 @@ import { closeModal } from '../../actions/modal_actions';
 import { clearErrors } from '../../actions/session_actions';
 import { connect } from 'react-redux';
 import LoginFormContainer from '../session_form/login_form_container';
+import loginForm from '../session_form/login_form';
 import SignupFormContainer from '../session_form/signup_form_container';
+import AvatarDropDown from '../nav_bar/avatar_dropdown';
 
-function Modal({modal, closeModal}) {
+function Modal({modal, closeModal,currentUserId}) {
   if (!modal) {
     return null;
   }
@@ -13,28 +15,32 @@ function Modal({modal, closeModal}) {
   // console.log("Right before switch")
   switch (modal) {
     case 'login':
-      component = <LoginFormContainer />;
+      component = <LoginFormContainer modal={modal} closeModal={closeModal}/>;
       break;
     case 'signup':
       // console.log("firing signup")
 
-      component = <SignupFormContainer />;
+      component = <SignupFormContainer modal={modal} closeModal={closeModal}/>;
+      break;
+    case 'avatar':
+      console.log('the modal should display the AvatarDropDown')
+      component = <AvatarDropDown currentUserId={currentUserId} modal={modal} closeModal={closeModal} />
       break;
     default:
       return null;
   }
   return (
-    <div className="modal-background" onClick={closeModal}>
-      <div className="modal-child" onClick={e => e.stopPropagation()}>
+      <>
         { component }
-      </div>
-    </div>
+      </>
+  
   );
 }
 
 const mapStateToProps = state => {
   return {
-    modal: state.ui.modal
+    modal: state.ui.modal,
+    currentUserId: state.session.currentUserId
   };
 };
 

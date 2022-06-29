@@ -50,6 +50,8 @@ class loginForm extends React.Component {
       errorBox = <div className="ErrorBox">{this.renderErrors()}</div>
     }
     return (
+      <div className={`modal-background ${this.props.modal}`} onClick={this.props.closeModal}>
+      <div className="modal-child" onClick={e => e.stopPropagation()}>
     <div className="modal-container-background">
         <div className='modal-logo-container'>
           <div className='modal-logo-wrapper'>
@@ -72,6 +74,8 @@ class loginForm extends React.Component {
       <button onClick={this.demoLogin} className="form-button">Demo User Log In</button>
 
       </form>
+    </div>
+    </div>
     </div>
     )
   }

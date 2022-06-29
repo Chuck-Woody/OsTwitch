@@ -1,4 +1,4 @@
-
+@import 'variables.scss';
 
 .logo {
   box-sizing: border-box;
@@ -95,6 +95,7 @@
   gap: 5px;
   margin-right: 20px;
   justify-content: space-around;
+  align-items: center;
 }
 
 .nav-bar-login-btn {
@@ -122,7 +123,7 @@
 }
 
 .nav-bar-signup-btn {
-  background: $purple-btn-color;
+  background: $twitch-purple;
   color: $white;
   font-size: 13px;
   font-weight: bold;
@@ -141,4 +142,23 @@
 .nav-bar-login:hover {
   background: $lighter-grey;
   color:$charcoal;
+}
+
+.dropdown-login {
+  height: inherit;
+  width: 100%;
+  border-radius: 4px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  background: none;
+  border: none;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.login-text {
+  padding-left: 10px;
 }

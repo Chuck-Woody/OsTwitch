@@ -1,4 +1,4 @@
- @import './variables.scss';
+@import 'variables.scss';
 
  .understream-about {
    display: flex;
@@ -56,7 +56,7 @@
   align-items: center;
   border: none;
   border-radius: 4px;
-  background: $purple-btn-color;
+  background: $twitch-purple;
   color: $white;
   font-size: 13px;
   font-weight: bold;

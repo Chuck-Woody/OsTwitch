@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import logo from '../../../app/assets/images/Logo/OsTwitch-logos_transparent.png'
-
+import AvatarDropDownIcon from './avatar_dropdown_icon'
 class NavBar extends React.Component {
   constructor(props) {
     super(props)
@@ -25,8 +25,7 @@ class NavBar extends React.Component {
       buttonsLoggedIn = (<div className="modal-initiation-button-wrapper">
         <button className="nav-bar-login-btn" onClick={() => this.props.openModal('login')}>Log In</button>
         <button className="nav-bar-signup-btn" onClick={() => this.props.openModal('signup')}> Sign Up</button>
-      
-        
+        <AvatarDropDownIcon currentUser={this.props.currentUser} openModal={this.props.openModal}/>
       </div>)
      
     }
@@ -48,12 +47,15 @@ class NavBar extends React.Component {
             <div className="nav-search-bar-button-wrapper">
               <input className="nav nav-search-input"type="text" value="Search" />
               <button className="nav-search-button"><i className="nav-search-button-icon fas fa-search"></i></button>
-              
           </div>
+
+    
+          
         </div>
 
         <div className="nav modal-initiation-container">
           {buttonsLoggedIn}
+          
         </div>
       </div>
 
