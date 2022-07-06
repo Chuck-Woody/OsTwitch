@@ -1,6 +1,19 @@
 @import 'variables.scss';
 
 
+//dark theme colored elements
+.mid-container.dark-theme {
+  background: $dark-theme-page-background;
+}
+
+
+//light-theme colored elements
+.mid-container.light-theme {
+  background: $light-theme-page-background;
+}
+
+//general elements [position,font,transitions, etc.]
+
 .left-mid-right {
   display: flex;
   flex-direction: row;
@@ -15,7 +28,7 @@
 .mid-container {
   width:100%;
   max-width: 68.62vw;
-  background: $off-white;
+  
 }
 .right-container {
   width:18.40vw;

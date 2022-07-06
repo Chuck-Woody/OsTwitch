@@ -2,15 +2,15 @@ import React from "react";
 import DarkThemeSlider from './dark_slider'
 
 function AvatarDropDown(props) {
-  console.log(props)
+  
   let dropDownItems;
-
+ 
   if (props.currentUserId) {
     dropDownItems = (
       <ul className="dropdown">
         <li>
           <i class="fal fa-moon"></i>
-          <DarkThemeSlider />
+          <DarkThemeSlider toggleDark={props.toggleDark} />
         </li>
         <li id='borderline' className="avatar-box-underline">border</li>
         <li className='avatar-button-item'>
@@ -24,7 +24,7 @@ function AvatarDropDown(props) {
   } else {
    dropDownItems=( <ul className="dropdown">
     <li>
-      <DarkThemeSlider />
+      <DarkThemeSlider toggleDark={props.toggleDark}/>
     </li>
     <li className="avatar-box-underline"></li>
     <li>

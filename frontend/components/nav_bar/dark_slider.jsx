@@ -1,8 +1,10 @@
 import React from "react";
 
+
+
 function DarkThemeSlider(props) {
 
-
+  
   return (
     <>
     <div className="darkSlider">
@@ -12,7 +14,7 @@ function DarkThemeSlider(props) {
 
       <label className="dark-slider-toggle-wrapper">
         <label className="dark-slider-toggle-container">
-          <input type="checkbox" className="dark-checkbox" />
+          <input type="checkbox" className="dark-checkbox" onClick={ () => props.toggleDark()}/>
           <span className="dark-slider round"></span>
         </label>
       </label>

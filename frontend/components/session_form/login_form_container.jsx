@@ -4,9 +4,12 @@ import { login, clearErrors } from '../../actions/session_actions';
 import { openModal, closeModal } from '../../actions/modal_actions';
 import loginForm from './login_form';
 
-const mapStateToProps = ({ errors }) => {
+const mapStateToProps = ({ errors,ui }) => {
+  console.log(ui.ui_state)
   return {
-    errors: errors.session
+    errors: errors.session,
+    darkTheme: ui.ui_state.dark_theme
+    
   };
 };
 

@@ -1,9 +1,45 @@
 @import 'variables.scss';
 
+
+//dark theme colored elements
+.mid-container.dark-theme {
+  background: $dark-theme-page-background;
+}
+
+.home-index-channel-logo.dark-theme {
+  border: solid $black 1px;
+}
+
+.home-index-stream-preview.dark-theme {
+  height: 170px;
+  background: $black;
+}
+
+.home-index-channel-name.dark-theme {
+  text-decoration-color: $dark-theme-index-text ;
+}
+//light-theme colored elements
+.mid-container.light-theme {
+  background: $light-theme-page-background;
+}
+
+.home-index-channel-logo.light-theme {
+  border: solid $black 1px;
+}
+
+.home-index-stream-preview.light-theme {
+  height: 170px;
+  background:$black;
+}
+
+.home-index-channel-name.light-theme {
+  text-decoration-color: $light-theme-index-text ;
+}
+//general elements [position,font,transitions, etc.]
+
 .home-index-channel-logo {
   width: 40px;
   border-radius: 100%;
-  border: solid $black 1px;
   height: 40px;
   object-fit: contain;
 }
@@ -60,7 +96,7 @@
   font-stretch: 100%;
   font-weight: 400;
   line-height: 19.5px;
-  text-decoration-color: $light-grey ;
+  
   text-decoration-line: none;
   text-decoration-style: solid;
   text-decoration-thickness: auto;
