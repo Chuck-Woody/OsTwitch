@@ -24,6 +24,18 @@
   color: $white
 }
 
+.modal-login-splash.dark-theme {
+  color: $white
+}
+
+.dropdown.dark-theme {
+  background: $dark-theme-modal-background;
+  color: $dark-theme-stream-title;
+}
+
+.dropdown-login.dark-theme {
+  color: $dark-theme-stream-title
+}
 //light-theme colored elements
 .modal-child.light-theme {
   background: $light-theme-modal-background;

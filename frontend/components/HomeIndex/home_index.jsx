@@ -14,13 +14,16 @@ class HomeIndex extends  React.Component{
   
   render() {
     // console.log("HomeIndex has",this.props)
+    let {darkTheme} = this.props
+    console.log(this.props)
     return (
-      <div className='home-index-container'>
+      <div className={`home-index-container ${darkTheme ? 'dark-theme' : 'light-theme'}`}>
         {this.props.channels.map(channel => {
             // console.log(channel);
             return (
               <Link className="home-index-stream-link" to={`/channel/${channel.id}`}>
-                <HomeIndexItem key={channel.owner_id} channel={channel}/>
+                <HomeIndexItem key={channel.owner_id} channel={channel} darkTheme={darkTheme}/>
+                
               </Link>
             )
           })}

@@ -1,5 +1,6 @@
 import React from "react";
 import logo from  '../../../app/assets/images/Logo/OsTwitch-logos_transparent.png'
+
 class loginForm extends React.Component {
   constructor(props){
     super(props)
@@ -59,7 +60,7 @@ class loginForm extends React.Component {
             <img className="modal logo" src={logo} />
           </div>
           <div className="modal-login-splash-wrapper">
-            <div className="modal-login-splash"> Log in to OsTwitch </div>
+            <div className={`modal-login-splash ${darkTheme ? 'dark-theme' : 'light-theme'}`}> Log in to OsTwitch </div>
           </div>
           <button className={`modal-tab-button dark-theme ${darkTheme ? 'dark-theme' : 'light-theme'}`} onClick={() => {this.props.openModal('signup'); this.props.clearErrors()}}> Sign Up</button>
           {errorBox}

@@ -1,14 +1,14 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import { closeModal } from '../../actions/modal_actions';
+import { closeModal, openModal } from '../../actions/modal_actions';
 import { toggleDark } from '../../actions/ui_state_actions';
 
 import LoginFormContainer from '../session_form/login_form_container';
 import SignupFormContainer from '../session_form/signup_form_container';
 import AvatarDropDown from '../nav_bar/avatar_dropdown';
 
-function Modal({modal,toggleDark, closeModal,currentUserId,darkTheme}) {
+function Modal({modal,toggleDark,openModal, closeModal,currentUserId,darkTheme}) {
   if (!modal) {
     return null;
   }
@@ -25,7 +25,7 @@ function Modal({modal,toggleDark, closeModal,currentUserId,darkTheme}) {
       break;
     case 'avatar':
       // console.log('the modal should display the AvatarDropDown')
-      component = <AvatarDropDown currentUserId={currentUserId} modal={modal} closeModal={closeModal} toggleDark={toggleDark} />
+      component = <AvatarDropDown openModal={openModal} darkTheme={darkTheme} currentUserId={currentUserId} modal={modal} closeModal={closeModal} toggleDark={toggleDark} />
       break;
     default:
       return null;
@@ -49,7 +49,8 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
   return {
     closeModal: () => dispatch(closeModal()),
-    toggleDark: () => dispatch(toggleDark())
+    toggleDark: () => dispatch(toggleDark()),
+    openModal: (modal) => dispatch(openModal(modal))
   };
 };
 
