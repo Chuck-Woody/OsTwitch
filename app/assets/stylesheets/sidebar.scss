@@ -1,6 +1,27 @@
 @import 'variables.scss';
 
 
+//dark theme colored elements
+.left-container.dark-theme {
+  background: $dark-theme-side-bar;
+  color: $dark-theme-stream-title
+}
+
+.channel-category.dark-theme {
+  color: $dark-theme-channel-text;
+}
+
+.channel-item-container.dark-theme:hover {
+  cursor: pointer;
+  background: $dark-theme-login-btn-background-hover;
+}
+//light-theme colored elements
+.channel-item-container.light-theme:hover {
+  cursor: pointer;
+  background: $light-theme-login-btn-background-hover;
+}
+
+//general elements [position,font,transitions, etc.]
 
 .left-container {
   display: flex;

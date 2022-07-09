@@ -1,5 +1,41 @@
 @import 'variables.scss';
 
+
+ //dark-theme colored elements
+ .chat-message-input.dark-theme {
+  background: $dark-theme-search-bar;
+  color: $dark-theme-search-bar-text;
+}
+
+.chat-submit-btn.dark-theme {
+  background: $twitch-purple;
+  color: $white;
+}
+
+//light-theme colored elements
+
+.chat-message-input.light-theme {
+  background: $light-theme-search-bar;
+  color: $light-theme-search-bar-text;
+}
+
+.chat-submit-btn.light-theme {
+  background: $twitch-purple;
+  color: $white;
+}
+
+//general elements [position,font,transitions, etc.]
+
+.chat-message-input {
+  object-fit: contain;
+  width: 95%;
+  height: 46.5%;
+  font-size: 0.9rem;
+  padding-left: 5px;
+  border: none;
+  border-radius: 6px;
+}
+
 .chat-header-container {
   height: 50px;
   box-sizing: border-box;
@@ -12,7 +48,6 @@
   text-transform: uppercase;
   font-stretch: 100%;
   font-family: $twitch-text;
-
 }
 
 .chat-body-container {
@@ -22,28 +57,13 @@
 .chat-submit-container {
   display:flex;
   flex-direction:column;
-  
   height: 93.5px;
   align-items: flex-end;
 }
-.chat-message-input {
-  object-fit: contain;
-  width: 95%;
-  height: 46.5%;
 
-  font-size: 0.9rem;
-  padding-left: 5px;
-  background: $cream;
-  color: $dark-grey;
-  border: none;
-  border-radius: 6px;
-
-}
 .chat-submit-btn {
   width: 50.05px;
   height: 19.5px;
-  background: $twitch-purple;
-  color: $white;
   font-size: 13px;
   font-weight: bold;
   font-family: $twitch-text;

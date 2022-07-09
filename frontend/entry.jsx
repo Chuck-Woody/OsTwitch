@@ -6,7 +6,7 @@ import { updateChannel } from './util/channel_api_util'
 import {addFollow, fetchFollows} from './actions/follow_actions'
 import {signup} from './actions/session_actions'
 import actionCable from 'actioncable'
-import { closeAllDropDowns, openDropDown } from './actions/dropdown_action'
+import {toggleDark} from '../frontend/actions/ui_state_actions'
 
 document.addEventListener("DOMContentLoaded", () => { 
   const cable=actionCable.createConsumer('wss://ostwitch.herokuapp.com//cable')
@@ -29,8 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
     store = configureStore();
   }
   window.store = store
-  window.openDropDown = openDropDown
-  window.closeAllDropDowns= closeAllDropDowns
+  window.toggleDark = toggleDark
   window.signup = signup
   window.addFollow = addFollow
   window.updateChannel = updateChannel

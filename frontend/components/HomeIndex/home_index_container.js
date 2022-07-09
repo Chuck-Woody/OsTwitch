@@ -5,7 +5,8 @@ import {fetchChannels} from '../../actions/channel_actions'
 const mSTP = (state) => {
   
   return {
-    channels: Object.values(state.entities.channels)
+    channels: Object.values(state.entities.channels),
+    darkTheme: state.ui.ui_state.dark_theme
   }
   
 }

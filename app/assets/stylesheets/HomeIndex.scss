@@ -1,9 +1,96 @@
 @import 'variables.scss';
 
+
+//dark theme colored elements
+.mid-container.dark-theme {
+  background: $dark-theme-page-background;
+}
+
+.home-index-channel-logo.dark-theme {
+  border: solid $black 1px;
+}
+
+.home-index-stream-preview.dark-theme {
+  height: 170px;
+  background: $black;
+}
+
+.home-index-channel-name.dark-theme {
+  text-decoration-color: $dark-theme-index-text ;
+}
+
+.home-index-container.dark-theme {
+  background: $dark-theme-page-background;
+}
+
+.home-index-stream-title.dark-theme {
+  
+  color: $dark-theme-stream-title
+} 
+
+.home-index-channel-name.dark-theme {
+  color: $dark-theme-channel-text;
+}
+
+.home-index-channel-name.dark-theme:hover{
+  color: $dark-theme-sign-up-btn-background
+}
+
+//light-theme colored elements
+.home-index-channel-name.light-theme {
+  color: $light-theme-channel-text;
+}
+
+.home-index-channel-name.light-theme:hover{
+  color: $light-theme-sign-up-btn-background
+}
+
+.home-index-stream-title.light-theme {
+  color: $light-theme-stream-title
+} 
+
+.home-index-container.light-theme {
+  background: $light-theme-page-background;
+}
+
+.mid-container.light-theme {
+  background: $light-theme-page-background;
+}
+
+.home-index-channel-logo.light-theme {
+  border: solid $black 1px;
+}
+
+.home-index-stream-preview.light-theme {
+  height: 170px;
+  background:$black;
+}
+
+.home-index-channel-name.light-theme {
+  text-decoration-color: $light-theme-index-text ;
+}
+//general elements [position,font,transitions, etc.]
+
+.home-index-stream-preview:hover {
+  animation: homeIndexItemPopout .2s forwards;
+}
+
+.home-index-stream-hidden {
+  // position: fixed;
+  width: auto;
+  height: auto;
+  background-color: $twitch-purple;
+  // z-index: -1;
+}
+
+@keyframes homeIndexItemPopout{
+  0% { transform: translate(0,0);  }
+  100% {transform: translate(4%,-5%); }
+}
+
 .home-index-channel-logo {
   width: 40px;
   border-radius: 100%;
-  border: solid $black 1px;
   height: 40px;
   object-fit: contain;
 }
@@ -16,6 +103,7 @@
 }
 
 .home-index-item-container {
+  cursor: pointer;
   width: 302px;
   height: 289px;
   display: flex;
@@ -48,7 +136,6 @@
   text-transform: capitalize;
   font-weight: 600;
   line-height: 16.8px;
- 
   text-overflow: ellipsis;
   text-size-adjust: 100%;
   vertical-align: baseline;
@@ -60,7 +147,7 @@
   font-stretch: 100%;
   font-weight: 400;
   line-height: 19.5px;
-  text-decoration-color: $light-grey ;
+  
   text-decoration-line: none;
   text-decoration-style: solid;
   text-decoration-thickness: auto;

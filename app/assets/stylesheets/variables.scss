@@ -7,10 +7,41 @@ $black: black;
 $red: red;
 $white: #ffffff;
 $twitch-purple: #772ce8;
-$twitch-light-purple: rgb(145, 71, 255);
+$twitch-light-purple: #9147ff;
 $twitch-deep-purple:  #300c67;
 
+
+$twitch-logo-purple: #9147ff;
+$intra-page-purple-text: #5c2cd4;
 // light theme
+$light-theme-nav-bar: #ffffff;
+$light-theme-nav-bar-text: #0e0e10;
+
+$light-theme-index-text:#53535f;
+
+$light-theme-search-bar-text: #545454;
+$light-theme-search-bar:#e5e5e5;
+$light-theme-search-bar-btn-background: #f2f2f2;
+$light-theme-search-bar-btn-color: #0e0e10;
+
+$light-theme-page-background: #f7f7f8;
+$light-theme-side-bar: #efeff1;
+$light-theme-stream-title: #0e0e10;
+$light-theme-channel-text: #6c6298;
+
+$light-theme-modal-background: #ffffff;
+$light-theme-modal-text: #0e0e10;
+$light-theme-modal-button-text: #5c16c5;
+
+$light-theme-login-btn-background: #f2f2f2;
+$light-theme-login-btn-background-hover: #e5e5e5;
+$light-theme-login-btn-text:#0e0e10; 
+
+$light-theme-sign-up-btn-background: #9147ff;
+$light-theme-sign-up-btn-background-hover: #772ce8;
+$light-theme-sign-up-btn-text: #ffffff;
+
+
 $slight-white: #efeff1;
 $off-white: #f7f7f8;
 $smoky-white: #E6E6EA;
@@ -19,4 +50,33 @@ $charcoal: #2c2c2e;
 $cream: #e5e5e5;
 $dark-grey: #444444;
 $lighter-grey: #adadb8;
-$light-grey: rgb(83, 83, 95);
+$light-grey: #53535f;
+
+// dark-theme
+$dark-theme-nav-bar: #18181b;
+$dark-theme-page-background: #0e0e10;
+$dark-theme-side-bar: #1f1f23;
+$dark-theme-stream-title: #dedee3;
+$dark-theme-channel-text: #6c6298;
+
+$dark-theme-index-text:#cbdee2;
+
+$dark-theme-search-bar: #464648; 
+$dark-theme-search-bar-text: #bfbfae;
+$dark-theme-search-bar-btn-background: #3a3a3d;
+$dark-theme-search-bar-btn-color: #efeff1;
+
+$dark-theme-chat-background: #18181b;
+$dark-theme-chat-text: #bfbfc0;
+$dark-theme-chat-header-text: #dedeca;
+
+$dark-theme-modal-background: #18181b;
+$dark-theme-modal-button-text: #bf94ff;
+
+$dark-theme-login-btn-background: #3a3a3d;
+$dark-theme-login-btn-background-hover: #464648;
+$dark-theme-login-btn-text:#dee9f1; 
+
+$dark-theme-sign-up-btn-background: #9147ff;
+$dark-theme-sign-up-btn-background-hover: #772ce8;
+$dark-theme-sign-up-btn-text: #ffebf6;

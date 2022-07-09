@@ -1,5 +1,109 @@
 @import 'variables.scss';
 
+
+//dark theme colored elements
+.nav-bar-container.dark-theme {
+  background-color: $dark-theme-nav-bar;
+}
+
+.nav-browse.dark-theme{
+  text-decoration: none;
+  color: $white;
+}
+
+.nav-search-input.dark-theme {
+  background: $dark-theme-search-bar;
+  color: $dark-theme-search-bar-text;
+}
+
+.nav-search-button.dark-theme {
+  background-color: $dark-theme-search-bar-btn-background;
+  color: $dark-theme-search-bar-btn-color;
+}
+
+.nav-bar-login-btn.dark-theme,.nav-bar-logout-btn.dark-theme {
+  background: $dark-theme-login-btn-background;
+  color:$dark-theme-login-btn-text;
+}
+
+.nav-bar-signup-btn.dark-theme {
+  background: $dark-theme-sign-up-btn-background;
+  color: $dark-theme-sign-up-btn-text;
+}
+
+.nav-bar-signup-btn.dark-theme:hover {
+  background:$dark-theme-sign-up-btn-background-hover;
+  color: $dark-theme-sign-up-btn-text;
+}
+
+.nav-bar-login.dark-theme:hover {
+  background: $dark-theme-login-btn-background-hover;
+  color:$dark-theme-login-btn-text;
+}
+.avatar-btn.dark-theme {
+  color:$white;
+}
+.avatar-btn.dark-theme:hover {
+  background: $dark-theme-login-btn-background-hover;
+  color:$dark-theme-login-btn-text;
+}
+
+.nav-about.dark-theme{
+  color: $white;
+}
+//light-theme colored elements
+
+.nav-about.light-theme{
+  color: $black;
+}
+
+.nav-bar-container.light-theme {
+  background-color: $light-theme-nav-bar;
+}
+.nav-browse.light-theme {
+  text-decoration: none;
+  color: $black;
+}
+
+.avatar-btn.light-theme:hover {
+  background: $light-theme-login-btn-background-hover;
+  color:$light-theme-login-btn-text;
+}
+
+.avatar-btn.light-theme {
+  color:$black;
+}
+.nav-bar-login.light-theme:hover {
+  background: $lighter-grey;
+  color:$charcoal;
+}
+
+.nav-bar-signup-btn.light-theme:hover {
+  background:$light-theme-sign-up-btn-background-hover;
+  color: $light-theme-sign-up-btn-text;
+}
+
+.nav-bar-signup-btn.light-theme {
+  background: $light-theme-sign-up-btn-background;
+  color: $light-theme-sign-up-btn-text;
+}
+
+.nav-bar-login-btn.light-theme, .nav-bar-logout-btn.light-theme {
+  background: $light-theme-login-btn-background;
+  color:$light-theme-login-btn-text;
+}
+
+.nav-search-button.light-theme {
+  background-color: $light-theme-search-bar-btn-background;
+  color: $light-theme-search-bar-btn-color
+}
+
+.nav-search-input.light-theme {
+  background: $light-theme-search-bar;
+  color: $light-theme-search-bar-text;
+}
+//general elements [position,font,transitions, etc.]
+
 .logo {
   box-sizing: border-box;
   width: 100px;
@@ -11,11 +115,16 @@
   font-family: $twitch-text;
 }
 
+#root > div > div.nav.nav-bar-container > div.nav-bar.logo-container > a:nth-child(2) {
+  text-decoration: none;
+}
+
 .nav-browse {
   font-weight: bold;
   padding-left: 20px;
   padding-right: 20px;
 }
+
 .nav-bar-container {
   width: 100%;
   display: flex;
@@ -45,38 +154,35 @@
   height: 34px;
   font-size: 0.9rem;
   padding-left: 5px;
-  background: $cream;
-  color: $dark-grey;
   border: none;
   border-top-left-radius: 6px;
   border-bottom-left-radius: 6px;
 }
+
 .nav-search-button-icon {
   width: 24;
   height: 24;
-  
 }
+
 .nav-search-bar-button-wrapper {
   display: inline-flex;
   gap: 1px;
-  
 }
+
 .nav-search-button {
   width: 34px;
   height: 36px;
   border: none;
-  
   border-bottom-right-radius: 4px;
   border-top-right-radius: 4px;
-  background-color: $creamy-white;
 }
+
 .nav-bar.logo-container {
   width: 20%;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  
 }
 
 .nav-search-bar-button-wrapper {
@@ -99,8 +205,6 @@
 }
 
 .nav-bar-login-btn {
-  background: $creamy-white;
-  color:$charcoal;
   font-size: 13px;
   font-weight: bold;
   font-family: $twitch-text;
@@ -110,9 +214,17 @@
   border-radius: 6px;
 }
 
+.avatar-btn {
+  font-size: 13px;
+  font-weight: bold;
+  font-family: $twitch-text;
+  height: 30px;
+  width: auto;
+  border: none;
+  border-radius: 4px;
+}
+
 .nav-bar-logout-btn {
-  background: $creamy-white;
-  color:$charcoal;
   font-size: 13px;
   font-weight: bold;
   font-family: $twitch-text;
@@ -123,8 +235,6 @@
 }
 
 .nav-bar-signup-btn {
-  background: $twitch-purple;
-  color: $white;
   font-size: 13px;
   font-weight: bold;
   font-family: $twitch-text;
@@ -132,16 +242,6 @@
   width: auto;
   border: none;
   border-radius: 6px;
-
-}
-.nav-bar-signup-btn:hover {
-  background:$twitch-deep-purple;
-  color: $white;
-}
-
-.nav-bar-login:hover {
-  background: $lighter-grey;
-  color:$charcoal;
 }
 
 .dropdown-login {

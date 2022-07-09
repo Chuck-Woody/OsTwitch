@@ -9,14 +9,15 @@ class HomeIndexItem extends React.Component {
   
   
   render() {
-    // console.log(this.props)
+    let {darkTheme} = this.props
     return (
         
       <div className="home-index-item-container">
 
         
-        <div className="home-index-stream-preview">
-          
+         <div className="home-index-stream-hidden">
+            <div className="home-index-stream-preview">
+            </div>
         </div>
         <div className="home-index-under-item-container">
           <div className="home-index-logo">
@@ -24,10 +25,10 @@ class HomeIndexItem extends React.Component {
             
           </div>
           <div className="home-index-channel-info-container">
-            <div className="home-index-stream-title">
+            <div className={`home-index-stream-title ${darkTheme ? 'dark-theme' : 'light-theme'}`}>
                 Stream Title
             </div>
-            <div className="home-index-channel-name">
+            <div className={`home-index-channel-name ${darkTheme ? 'dark-theme' : 'light-theme'}`}>
                 {this.props.channel.channel_name}
             </div>
           </div>

@@ -1,13 +1,14 @@
 import React from 'react';
-import { closeModal } from '../../actions/modal_actions';
-import { clearErrors } from '../../actions/session_actions';
 import { connect } from 'react-redux';
+
+import { closeModal, openModal } from '../../actions/modal_actions';
+import { toggleDark } from '../../actions/ui_state_actions';
+
 import LoginFormContainer from '../session_form/login_form_container';
-import loginForm from '../session_form/login_form';
 import SignupFormContainer from '../session_form/signup_form_container';
 import AvatarDropDown from '../nav_bar/avatar_dropdown';
 
-function Modal({modal, closeModal,currentUserId}) {
+function Modal({modal,toggleDark,openModal, closeModal,currentUserId,darkTheme}) {
   if (!modal) {
     return null;
   }
@@ -15,16 +16,16 @@ function Modal({modal, closeModal,currentUserId}) {
   // console.log("Right before switch")
   switch (modal) {
     case 'login':
-      component = <LoginFormContainer modal={modal} closeModal={closeModal}/>;
+      component = <LoginFormContainer darkTheme={darkTheme} modal={modal} closeModal={closeModal}/>;
       break;
     case 'signup':
       // console.log("firing signup")
 
-      component = <SignupFormContainer modal={modal} closeModal={closeModal}/>;
+      component = <SignupFormContainer darkTheme={darkTheme} modal={modal} closeModal={closeModal}/>;
       break;
     case 'avatar':
-      console.log('the modal should display the AvatarDropDown')
-      component = <AvatarDropDown currentUserId={currentUserId} modal={modal} closeModal={closeModal} />
+      // console.log('the modal should display the AvatarDropDown')
+      component = <AvatarDropDown openModal={openModal} darkTheme={darkTheme} currentUserId={currentUserId} modal={modal} closeModal={closeModal} toggleDark={toggleDark} />
       break;
     default:
       return null;
@@ -40,13 +41,16 @@ function Modal({modal, closeModal,currentUserId}) {
 const mapStateToProps = state => {
   return {
     modal: state.ui.modal,
-    currentUserId: state.session.currentUserId
+    currentUserId: state.session.currentUserId,
+    darkTheme: state.ui.ui_state.dark_theme
   };
 };
 
 const mapDispatchToProps = dispatch => {
   return {
-    closeModal: () => dispatch(closeModal())
+    closeModal: () => dispatch(closeModal()),
+    toggleDark: () => dispatch(toggleDark()),
+    openModal: (modal) => dispatch(openModal(modal))
   };
 };
 

@@ -13,7 +13,8 @@ const selectFollowedChannels = (state) => {
 const mSTP = (state) => {
   // console.log(state)
   return {
-  follows: selectFollowedChannels(state)
+  follows: selectFollowedChannels(state),
+  darkTheme: state.ui.ui_state.dark_theme
 }}
 
 // const mDTP = dispatch => ({
