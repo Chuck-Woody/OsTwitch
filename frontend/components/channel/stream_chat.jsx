@@ -36,25 +36,32 @@ class StreamChat extends React.Component {
   }
   
   componentDidMount(resubscribe){
-    let sub = this.props.cable.subscriptions.create({
-      channel: 'StreamchatsChannel', 
-      channel_id: +this.props.currentChannel
-    }, 
-    {
-      received: (message) => this.props.receiveMessage(message)
-    })
-    this.setState({subscription: sub}, () => console.log(this.state.subscription))
-    console.log("the sub is", sub)
-    
-    console.log(" the cable is",this.props.cable)
+    let {subs} = this.props
+    if (subs) {
+      let sub = this.props.cable.subscriptions.create({
+        channel: 'StreamchatsChannel', 
+        channel_id: +this.props.currentChannel
+      }, 
+      {
+        received: (message) => this.props.receiveMessage(message)
+      })
+      
+      this.setState({subscription: sub}, () => console.log(this.state.subscription))
+      console.log("the sub is", sub)
+      
+      console.log(" the cable is",this.props.cable)
+    }
     
   }
 
   componentWillUnmount(){
-    this.props.cable.subscriptions.remove({
-      channel: 'StreamchatsChannel', 
-      channel_id: +this.props.currentChannel
-    })
+    let {subs} = this.props
+    if (subs) {
+      this.props.cable.subscriptions.remove({
+        channel: 'StreamchatsChannel', 
+        channel_id: +this.props.currentChannel
+      })
+    }
   }
 
   getSnapshotBeforeUpdate(prevProps, prevState){
