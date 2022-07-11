@@ -1,29 +1,74 @@
 @import 'variables.scss';
 
+//dark theme colored elements
+.mid-container.dark-theme {
+  background: $dark-theme-page-background;
+}
+
+.understream-stream-title.dark-theme , .understream-channel-name.dark-theme {
+  color: $dark-theme-stream-title;
+}
+.channel-about-background.dark-theme{
+  background: $dark-theme-channel-about-background;
+  color: $dark-theme-stream-title;
+}
+.understream-stream-title.dark-theme:hover {
+  text-decoration: underline ;
+  text-decoration-color: $twitch-purple;
+}
+//light-theme colored elements
+.understream-channel-name.light-theme:hover {
+  text-decoration: underline ;
+  text-decoration-color: $twitch-purple;
+}
+
+.channel-about-background.light-theme{
+  background: $light-theme-channel-about-background;
+}
+
+.mid-container.light-theme {
+  background: $light-theme-page-background;
+  color: $light-theme-stream-title;
+}
+
+//general elements [position,font,transitions, etc.]
+
  .understream-about {
    display: flex;
    flex-direction: column;
  }
+ 
  .understream-container {
   display: flex;
   flex-direction: row;
   gap: 3px;
-  width: 69.44vw;
   height: 10vh;
 }
 
 .understream-channel-logo {
-  width: 64px;
+  width: 100%;
+  height: 100%;
   border-radius: 100%;
-  border: solid $black 1px;
-  height: 64px;
   object-fit: contain;
+  border: solid $twitch-purple 2px;
+}
+
+.understream-channel-logo:hover {
+  animation: borderThiccness .1s forwards
+}
+
+@keyframes borderThiccness {
+  0% {border: solid 2px $twitch-purple}
+  100%{border: solid 4px $twitch-purple;}
 }
 
 .understream-channel-logo-container {
+  width: 64px;
+  height: 64px;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 10px;
 }
 .understream-info-composition {
   padding-top: 3px;
@@ -34,12 +79,11 @@
 
 }
 .understream-channel-info-container {
-  width: 93%;
   height: 30px;
   display: flex;
   direction: row;
   justify-content: space-between;
-  align-items: baseline;
+  // align-items: baseline;
   font-family: $twitch-text;
   font-size: 18px;
   font-stretch: 100%;
@@ -49,7 +93,25 @@
   
 }
 
+.understream-channel-name-wrapper {
+  padding-top: 7px;
+}
+
+.understream-channel-button-wrapper {
+  padding-right: 3%;
+}
+
+.follow-btn:hover {
+  background-color: black;
+}
+
+@keyframes heartfill {
+  0% {color: white}
+  100% {color: white}
+}
+
 .follow-btn {
+  height: 100%;
   display: flex;
   justify-content: space-between;
   gap: 5px;
@@ -79,6 +141,8 @@
   justify-content: center;
 }
 
+
+
 .about-streamer {
     font-family: $twitch-text;
     font-size: 24px;
@@ -88,13 +152,9 @@
     vertical-align: baseline;
 }
 .channel-about-background {
-  width: 95%;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 20px;
-  padding-right: 20px;
-  
-  background: white;
+  width: 70%;
+  background: $white;
+  padding: 30px;
 }
 .channel-description,.streamer-follows-number{
   font-family: $twitch-text;

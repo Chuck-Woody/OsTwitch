@@ -22,7 +22,8 @@ const mSTP = (state,ownProps) => {
       messages: Object.values(state.entities.messages),
       location: ownProps.match.params.id,
       subNum: ownProps.cable.subscriptions.subscriptions.length,
-      username: state.entities.users.username
+      username: state.entities.users.username,
+      darkTheme: state.ui.ui_state.dark_theme
     }
   } else {
     return {
@@ -33,8 +34,8 @@ const mSTP = (state,ownProps) => {
       cable: ownProps.cable,
       messages: Object.values(state.entities.messages),
       location: ownProps.match.params.id,
-      subNum: ownProps.cable.subscriptions.subscriptions.length
-      
+      subNum: ownProps.cable.subscriptions.subscriptions.length,
+      darkTheme: state.ui.ui_state.dark_theme
     }
     
   }}

@@ -23,6 +23,7 @@ class StreamChat extends React.Component {
   handleSubmit(e) {
    
     e.preventDefault();
+    let {currentUser} = this.props
     const channel_id = +this.props.currentChannel
     const user_id = this.props.currentUser
     // console.log(this.props)
@@ -31,8 +32,13 @@ class StreamChat extends React.Component {
       channel_id: channel_id,
       user_id: user_id
       });
-    
-   this.props.createMessage(message).then(() => this.setState({body: ""}))
+  
+      if (currentUser) {
+
+        this.props.createMessage(message).then(() => this.setState({body: ""}))
+      } else {
+        this.props.openModal('login')
+      }
   }
   
   componentDidMount(resubscribe){
@@ -95,6 +101,7 @@ class StreamChat extends React.Component {
     // console.log("currentChannel", this.props.currentChannel)
     // console.log('currentUser', this.props.currentUser)
     // 
+    let {darkTheme} = this.props
     return (
       <div className="chat-container">
             <div className="chat-header-container">
@@ -111,7 +118,7 @@ class StreamChat extends React.Component {
             </div>
             
             <form className="chat-submit-container" onSubmit={this.handleSubmit}>
-              <input className="chat-message-input" type="text" value={this.state.body} onChange={this.update('body')}/>
+              <input className={`${darkTheme ? 'dark-theme' : 'light-theme'} chat-message-input `} placeholder='Send a message' type="text" value={this.state.body} onChange={this.update('body')}/>
               <button className='chat-submit-btn'>Chat</button>
               </form>
             
