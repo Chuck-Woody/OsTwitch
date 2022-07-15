@@ -8,6 +8,11 @@ export const receiveMessage = (message) => ({
 
 export const createMessage = message => dispatch => {
   return MessageApiUtil.createMessage(message)
+    .then((response) => {
+      // console.log(`this is the response from the server ${JSON.stringify(response)}`)
+      dispatch(receiveMessage(response))
+      }
+      )
   ;
 };
 

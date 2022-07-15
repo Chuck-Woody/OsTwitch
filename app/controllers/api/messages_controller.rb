@@ -5,14 +5,23 @@ class Api::MessagesController < ApplicationController
         @message.user_id = current_user.id
         if @message.save
            @channel = Channel.find_by(id: message_params[:channel_id])
+           
             StreamchatsChannel.broadcast_to(@channel,{
               id: @message.id,
               user_id: @message.user_id,
+              username: User.find_by(id: @message.user_id).username,
               body:  @message.body,
               channel_id: @message.channel_id,
               created_at: @message.created_at
               })
-            render json: {}
+            render json: {
+              id: @message.id,
+              user_id: @message.user_id,
+              username: User.find_by(id: @message.user_id).username,
+              body:  @message.body,
+              channel_id: @message.channel_id,
+              created_at: @message.created_at
+              }
         else
             render json: @message.errors.full_messages, status: 422
         end

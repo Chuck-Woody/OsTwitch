@@ -67,7 +67,7 @@ class SignupForm extends React.Component{
         <input className={`form-input ${darkTheme ? 'dark-theme': 'light-theme'}`} type="password" value={this.state.password} onChange={this.update('password')}/>
         
         <label className={`form-label ${darkTheme ? 'dark-theme': 'light-theme'}`}>Email:</label>
-        <input className={`form-input ${darkTheme ? 'dark-theme': 'light-theme'}`} type="password" value={this.state.password} onChange={this.update('password')}/>
+        <input className={`form-input ${darkTheme ? 'dark-theme': 'light-theme'}`} type="password" value={this.state.email} onChange={this.update('email')}/>
 
       <button className={`form-button ${darkTheme ? 'dark-theme': 'light-theme'}`}>Sign Up</button>
     </form>

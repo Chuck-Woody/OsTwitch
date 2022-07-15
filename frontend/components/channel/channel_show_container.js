@@ -19,7 +19,7 @@ const mSTP = (state,ownProps) => {
       followedChannels: state.entities.users[state.session.currentUserId].follows,
       follow:  selectFollow(state,ownProps.match.params.id),
       cable: ownProps.cable,
-      messages: Object.values(state.entities.messages),
+      messages: Object.values(state.entities.messages), //takes the messages in state and puts them into an array
       location: ownProps.match.params.id,
       subNum: ownProps.cable.subscriptions.subscriptions.length,
       username: state.entities.users.username,

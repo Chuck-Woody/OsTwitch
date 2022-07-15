@@ -9,7 +9,8 @@ import actionCable from 'actioncable'
 import {toggleDark} from '../frontend/actions/ui_state_actions'
 
 document.addEventListener("DOMContentLoaded", () => { 
-  const cable=actionCable.createConsumer('wss://ostwitch.herokuapp.com//cable')
+  const cable=actionCable.createConsumer('ws://localhost:3000/cable')
+  // const cable=actionCable.createConsumer('wss://ostwitch.herokuapp.com//cable')
 
   let root = document.getElementById("root")
   let store;

@@ -1,14 +1,30 @@
 import React from "react"
-import DarkThemeSlider from './dark_slider.jsx'
 
 function AvatarDropDownIcon(props) {
   
-  return (
-    <button className='avatar-btn' onClick={() => props.openModal('avatar')}>
+  let {currentUser} = props
+  let avatarDropDownButton;
+
+  if (currentUser) {
+    avatarDropDownButton = (
+      <button className='avatar-btn logged_in' onClick={() => props.openModal('avatar')}>
+  
+        <i class="fas fa-user-ninja"></i>
+
+      </button>
+    )
+  } else {
+    avatarDropDownButton = (
+      <button className='avatar-btn' onClick={() => props.openModal('avatar')}>
   
       <i class="fas fa-user-ninja"></i>
 
     </button>
+    )
+  }
+
+  return (
+    avatarDropDownButton
   ) 
 }
 

@@ -7,11 +7,23 @@
   color: $dark-theme-search-bar-text;
 }
 
+.chat-header-container.dark-theme {
+  color: $white;
+}
+.chat-message-input.dark-theme:focus {
+  background: $black;
+  color: $dark-theme-search-bar-text;
+}
+
 .chat-submit-btn.dark-theme {
   background: $twitch-purple;
   color: $white;
 }
 
+.chat-body-container.dark-theme, .chat-submit-container.dark-theme{
+  background: $dark-theme-nav-bar;
+
+}
 //light-theme colored elements
 
 .chat-message-input.light-theme {
