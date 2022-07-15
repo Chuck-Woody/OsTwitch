@@ -7,8 +7,9 @@ import { toggleDark } from '../../actions/ui_state_actions';
 import LoginFormContainer from '../session_form/login_form_container';
 import SignupFormContainer from '../session_form/signup_form_container';
 import AvatarDropDown from '../nav_bar/avatar_dropdown';
+import { logout } from '../../actions/session_actions';
 
-function Modal({modal,toggleDark,openModal, closeModal,currentUserId,darkTheme}) {
+function Modal({modal,toggleDark,openModal, closeModal,currentUserId,darkTheme,logout,channelInfo}) {
   if (!modal) {
     return null;
   }
@@ -25,7 +26,7 @@ function Modal({modal,toggleDark,openModal, closeModal,currentUserId,darkTheme})
       break;
     case 'avatar':
       // console.log('the modal should display the AvatarDropDown')
-      component = <AvatarDropDown openModal={openModal} darkTheme={darkTheme} currentUserId={currentUserId} modal={modal} closeModal={closeModal} toggleDark={toggleDark} />
+      component = <AvatarDropDown channelInfo={channelInfo} logout={logout} openModal={openModal} darkTheme={darkTheme} currentUserId={currentUserId} modal={modal} closeModal={closeModal} toggleDark={toggleDark} />
       break;
     default:
       return null;
@@ -42,7 +43,8 @@ const mapStateToProps = state => {
   return {
     modal: state.ui.modal,
     currentUserId: state.session.currentUserId,
-    darkTheme: state.ui.ui_state.dark_theme
+    darkTheme: state.ui.ui_state.dark_theme,
+    channelInfo: state.entities.channels
   };
 };
 
@@ -50,7 +52,8 @@ const mapDispatchToProps = dispatch => {
   return {
     closeModal: () => dispatch(closeModal()),
     toggleDark: () => dispatch(toggleDark()),
-    openModal: (modal) => dispatch(openModal(modal))
+    openModal: (modal) => dispatch(openModal(modal)),
+    logout: () => dispatch(logout())
   };
 };
 

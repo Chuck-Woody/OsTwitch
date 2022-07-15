@@ -18,9 +18,10 @@ class NavBar extends React.Component {
     let {darkTheme} = this.props
     if (this.props.currentUser) {
       buttonsLoggedIn = (<div className="modal-initiation-button-wrapper">
-        <button className={`nav-bar-logout-btn ${darkTheme ? `dark-theme` : `light-theme`}` } onClick={() => this.props.logout()}>Log Out</button>
+        {/* <button className={`nav-bar-logout-btn ${darkTheme ? `dark-theme` : `light-theme`}` } onClick={() => this.props.logout()}>Log Out</button>
         <img className="home-index-channel-logo" src={`https://robohash.org/${this.props.userInfo.username}.png`}></img>
-        <div> Welcome {this.props.userInfo.username} </div>
+        <div> Welcome {this.props.userInfo.username} </div> */}
+         <AvatarDropDownIcon currentUser={this.props.currentUser}  openModal={this.props.openModal}/>
       </div>)
     } else {
       buttonsLoggedIn = (<div className="modal-initiation-button-wrapper">
@@ -47,7 +48,7 @@ class NavBar extends React.Component {
           <div className={`nav-search-bar-container ${darkTheme ? `dark-theme` : `light-theme`}`}>
             <div className="nav-search-bar-button-wrapper">
               <input className={`nav nav-search-input  ${darkTheme ? `dark-theme` : `light-theme`}`} type="text" value="Search" />
-              <button className={`nav-search-button  ${darkTheme ? `dark-theme` : `light-theme`}`}><i className="nav-search-button-icon fas fa-search"></i></button>
+              <button className={`nav-search-button  ${darkTheme ? `dark-theme` : `light-theme`}`}><i className="nav-search-button-icon fas fa-search"></i></button>  
           </div>
 
     

@@ -13,11 +13,10 @@ class UnderStream extends React.Component{
     // console.log("Props in understream", this.props)
     // console.log(this.props.addFollow)
     let number;
-
+    let {darkTheme} = this.props
     let follow;
     number = parseInt(this.props.currentChannel)
     
-    // console.log(number)
     if (this.props.current_user !== null) {
       if ( this.props.followedChannels.includes(number) && this.props.current_user !==null) {
         follow = <button className='follow-btn' onClick={() => this.props.unFollow(this.props.follow[0].id)}> <i class="fas fa-heart"></i> Unfollow </button>
@@ -45,18 +44,24 @@ class UnderStream extends React.Component{
             <div className="understream-info-composition">
 
               <div className="understream-channel-info-container">
-                <div className='understream-channel-name'>{this.props.channels[number].channel_name}</div> 
-                {follow}
+                <div className="understream-channel-name-wrapper">
+
+                 <div className={` ${darkTheme ? 'dark-theme' : 'light-theme'} understream-channel-name`}>{this.props.channels[number].channel_name}</div> 
+                </div>
+                <div className="understream-channel-button-wrapper">
+
+                  {follow}
+                </div>
               </div>
 
-              <div className="understream-stream-title">
+              <div className={` ${darkTheme ? 'dark-theme' : 'light-theme'} understream-stream-title`}>
                 Stream title placeholder
               </div>
             </div>
 
       </div>
             <div className="channel-about-composition">
-              <div className="channel-about-background">
+              <div className={` ${darkTheme ? 'dark-theme' : 'light-theme'} channel-about-background`}>
 
                 <div className="about-streamer">
                     About {this.props.channels[number].channel_name}

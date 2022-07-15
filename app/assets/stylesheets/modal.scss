@@ -56,7 +56,10 @@
   color: $light-theme-search-bar-text;
 }
 //general elements [position,font,transitions, etc.]
-
+#root > div > div.avatar-modal-background > div > ul > li:nth-child(1) {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
 .modal-background {
   position: fixed;
   top: 0;

@@ -1,4 +1,4 @@
-App.streamchat = App.cable.subscriptions.create "StreamchatChannel",
+App.streamchat = App.cable.subscriptions.create "StreamchatsChannel",
   connected: ->
     # Called when the subscription is ready for use on the server
 
