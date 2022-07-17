@@ -45,14 +45,14 @@ class StreamChat extends React.Component {
   
   componentDidMount(){
     // console.log(`${JSON.stringify(this.props)}`)
-
-    this.props.cable.subscriptions.create({
-        channel: 'StreamchatsChannel', 
-        channel_id: +this.props.currentChannel
-      }, 
-      {
-        received: (message) => this.props.receiveMessage(message)
-      })
+    this.setState({subscription: this.props.cable.subscriptions.create({
+      channel: 'StreamchatsChannel', 
+      channel_id: +this.props.currentChannel
+    }, 
+    {
+      received: (message) => this.props.receiveMessage(message)
+    })},()=> console.log('the component mounted and subscribed', this.state.subscription) )
+    
   }
 
   componentWillUnmount(){
@@ -74,22 +74,24 @@ class StreamChat extends React.Component {
     return false;
   }
 
-  componentDidUpdate(prevSate,prevProps,resubscribe){
-    if (resubscribe) {
-      this.props.cable.subscriptions.remove({
-        channel: 'StreamchatsChannel', 
-        channel_id: +this.props.currentChannel
-      })
-      let sub = this.props.cable.subscriptions.create({
+  componentDidUpdate(prevState,prevProps){
+    console.log(`this is the prevState ${Object.keys(prevState)}`)
+    console.log(`The prevChannel was ${prevState.currentChannel} the current channel is ${this.props.currentChannel}`)
+
+    if (prevState.currentChannel !== this.props.currentChannel) {
+      console.log(`The componentDidUpdate if statement was triggered because the channels changed`)
+      this.props.cable.subscriptions.remove(this.state.subscription)
+      this.props.clearMessages()
+      this.setState({subscription: this.props.cable.subscriptions.create({
         channel: 'StreamchatsChannel', 
         channel_id: +this.props.currentChannel
       }, 
       {
         received: (message) => this.props.receiveMessage(message)
-      })
-      
+      })})
+     
     }
-   
+    
   }
 
   render() {

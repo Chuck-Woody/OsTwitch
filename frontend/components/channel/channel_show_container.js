@@ -4,7 +4,7 @@ import {fetchChannels} from '../../actions/channel_actions'
 import { addFollow,unFollow } from "../../actions/follow_actions";
 import { openModal } from '../../actions/modal_actions';
 import { withRouter } from "react-router-dom";
-import { receiveMessage,createMessage } from "../../actions/message_actions";
+import { receiveMessage,createMessage, clearMessages } from "../../actions/message_actions";
 
 const selectFollow= (state,channel_id) => {
  return  Object.values(state.entities.follows).filter(follow => follow.channel_id == channel_id)
@@ -47,7 +47,8 @@ const mSTP = (state,ownProps) => {
     unFollow: (followId) => dispatch(unFollow(followId)),
     openModal: modal => dispatch(openModal(modal)),
     receiveMessage: (message) => dispatch(receiveMessage(message)),
-    createMessage: (message) => dispatch(createMessage(message))
+    createMessage: (message) => dispatch(createMessage(message)),
+    clearMessages: () => dispatch(clearMessages())
   
 })
 
