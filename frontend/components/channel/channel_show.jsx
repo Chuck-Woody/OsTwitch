@@ -1,6 +1,7 @@
 import React from "react";
 import UnderStream from "./under_stream";
 import StreamChat from './stream_chat'
+import { clearMessages } from "../../actions/message_actions";
 
 class ChannelShow extends React.Component{
   constructor(props){
@@ -25,17 +26,18 @@ class ChannelShow extends React.Component{
       }
     
       if (this.props.currentUser) {
-        chat = <StreamChat darkTheme={this.props.darkTheme} username={this.props.username} subNum={this.props.subNum} location={this.props.location} messages={this.props.messages} createMessage={this.props.createMessage} currentUser={this.props.currentUser} currentChannel={this.props.currentChannel} cable={this.props.cable} receiveMessage={this.props.receiveMessage}/>
+        chat = <StreamChat clearMessages={this.props.clearMessages} darkTheme={this.props.darkTheme} username={this.props.username} subNum={this.props.subNum} location={this.props.location} messages={this.props.messages} createMessage={this.props.createMessage} currentUser={this.props.currentUser} currentChannel={this.props.currentChannel} cable={this.props.cable} receiveMessage={this.props.receiveMessage}/>
       } else {
-        chat = <StreamChat darkTheme={this.props.darkTheme} props={this.props} openModal={this.props.openModal} subNum={this.props.subNum} location={this.props.location} messages={this.props.messages} createMessage={this.props.createMessage} currentUser={this.props.currentUser} currentChannel={this.props.currentChannel} cable={this.props.cable} />
+        chat = <StreamChat clearMessages={this.props.clearMessages} darkTheme={this.props.darkTheme} props={this.props} openModal={this.props.openModal} subNum={this.props.subNum} location={this.props.location} messages={this.props.messages} createMessage={this.props.createMessage} currentUser={this.props.currentUser} currentChannel={this.props.currentChannel} cable={this.props.cable} receiveMessage={this.props.receiveMessage}/>
       }
 
     return (
       <div className="mid-right-container">
         <div className={` ${darkTheme ? 'dark-theme' : 'light-theme'} mid-container`}>
-          <iframe className='stream-container' 
+          <div className="stream-container">Placeholder</div>
+          {/* <iframe className='stream-container' 
             src="https://www.youtube.com/embed/tgbNymZ7vqY">
-          </iframe>
+          </iframe> */}
           {understream}
           
         </div>

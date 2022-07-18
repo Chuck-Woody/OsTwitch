@@ -24,8 +24,15 @@
   background: $dark-theme-nav-bar;
 
 }
+
+.message-body.dark-theme {
+  color: $dark-theme-login-btn-text
+}
 //light-theme colored elements
 
+.message-body.light-theme {
+  color: $light-theme-login-btn-text
+}
 .chat-message-input.light-theme {
   background: $light-theme-search-bar;
   color: $light-theme-search-bar-text;
@@ -37,6 +44,18 @@
 }
 
 //general elements [position,font,transitions, etc.]
+
+.message-container {
+  font-family: $twitch-text;
+}
+
+.message-container:hover {
+  background: $lighter-grey
+}
+
+.message-username {
+  font-weight: bold;
+}
 
 .chat-message-input {
   object-fit: contain;
@@ -63,6 +82,7 @@
 }
 
 .chat-body-container {
+  overflow: y;
   height: 771px;
 }
 
