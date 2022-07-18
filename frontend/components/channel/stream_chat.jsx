@@ -11,6 +11,7 @@ class StreamChat extends React.Component {
       channel_id: "",
       user_id: "",
       messages: [],
+      username_color: this.randomHex()
     }
     
     this.handleSubmit = this.handleSubmit.bind(this)
@@ -19,6 +20,15 @@ class StreamChat extends React.Component {
     return e => this.setState({
       [field]: e.currentTarget.value
     });
+  }
+
+  randomHex() {
+    let HEX = [0,1,2,3,4,5,6,7,8,9,'A','B','C','D','E','F']
+    let hexColor = '#'
+    for(let i = 0 ; i < 6; i++) {
+      hexColor += HEX[Math.floor(Math.random() * HEX.length)]
+    }
+    return hexColor
   }
 
   handleSubmit(e) {
@@ -31,7 +41,8 @@ class StreamChat extends React.Component {
     const message = Object.assign({},{
       body: this.state.body,
       channel_id: channel_id,
-      user_id: user_id
+      user_id: user_id,
+      username_color: this.state.username_color
       });
       console.log(`the current user, ${currentUser} and the message submitted is : ${JSON.stringify(message)}`)
       if (currentUser) {
@@ -44,7 +55,7 @@ class StreamChat extends React.Component {
   }
   
   componentDidMount(){
-    // console.log(`${JSON.stringify(this.props)}`)
+    console.log(this.randomHex())
     this.setState({subscription: this.props.cable.subscriptions.create({
       channel: 'StreamchatsChannel', 
       channel_id: +this.props.currentChannel
@@ -113,9 +124,10 @@ class StreamChat extends React.Component {
                 
                 {console.log(`inside the mapping function :)${message.username} ${message.body}`)}
                 return (
-                    <div className='message-container'>
-                      <span className="message-username">{message.username} </span> 
+                    <div className='message-container' >
+                      <span className="message-username" style={{color: message.username_color}}>{message.username}: </span> 
                       <span className="message-body">{message.body}</span> 
+                      
                     </div>
                 )
                   }

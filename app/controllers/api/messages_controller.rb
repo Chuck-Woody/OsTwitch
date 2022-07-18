@@ -1,7 +1,11 @@
 class Api::MessagesController < ApplicationController
 
   def create
-    @message = Message.new(message_params)
+    new_message_params = message_params
+    username_color = new_message_params.delete(:username_color)
+    # puts ("The message params are: #{message_params} and the new_message_params are #{new_message_params}")
+    @message = Message.new(new_message_params)
+        
         @message.user_id = current_user.id
         if @message.save
            @channel = Channel.find_by(id: message_params[:channel_id])
@@ -12,7 +16,8 @@ class Api::MessagesController < ApplicationController
               username: User.find_by(id: @message.user_id).username,
               body:  @message.body,
               channel_id: @message.channel_id,
-              created_at: @message.created_at
+              created_at: @message.created_at,
+              username_color: username_color
               })
             render json: {
               id: @message.id,
@@ -20,7 +25,8 @@ class Api::MessagesController < ApplicationController
               username: User.find_by(id: @message.user_id).username,
               body:  @message.body,
               channel_id: @message.channel_id,
-              created_at: @message.created_at
+              created_at: @message.created_at,
+              username_color: username_color
               }
         else
             render json: @message.errors.full_messages, status: 422
@@ -29,6 +35,6 @@ class Api::MessagesController < ApplicationController
 
   private
   def message_params
-    params.require(:message).permit(:user_id,:body,:channel_id,:created_at)
+    params.require(:message).permit(:user_id,:body,:channel_id,:created_at,:username_color)
   end
 end
