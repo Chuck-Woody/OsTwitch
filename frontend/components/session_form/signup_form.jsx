@@ -1,5 +1,6 @@
 import React from "react";
 import logo from  '../../../app/assets/images/Logo/OsTwitch-logos_transparent.png'
+import { Redirect } from "react-router-dom";
 
 class SignupForm extends React.Component{
   constructor(props){
@@ -22,7 +23,9 @@ class SignupForm extends React.Component{
     
     e.preventDefault();
     const user = Object.assign({}, this.state);
-    this.props.processForm(user).then(this.props.closeModal);
+    this.props.processForm(user).then(this.props.closeModal).then(
+      
+    );
     console.log("Sign Up fired")
   }
 
@@ -67,7 +70,7 @@ class SignupForm extends React.Component{
         <input className={`form-input ${darkTheme ? 'dark-theme': 'light-theme'}`} type="password" value={this.state.password} onChange={this.update('password')}/>
         
         <label className={`form-label ${darkTheme ? 'dark-theme': 'light-theme'}`}>Email:</label>
-        <input className={`form-input ${darkTheme ? 'dark-theme': 'light-theme'}`} type="password" value={this.state.email} onChange={this.update('email')}/>
+        <input className={`form-input ${darkTheme ? 'dark-theme': 'light-theme'}`} type="text" value={this.state.email} onChange={this.update('email')}/>
 
       <button className={`form-button ${darkTheme ? 'dark-theme': 'light-theme'}`}>Sign Up</button>
     </form>
