@@ -1,7 +1,7 @@
 import { connect } from "react-redux";
 import { fetchFollows } from "../../actions/follow_actions"
 import SideBarIndex from "./side_bar_index";
-
+import {withRouter} from 'react-router-dom'
 const selectFollowedChannels = (state) => {
 
   if ( Object.values(state.entities.users).length > 0) {
@@ -10,11 +10,14 @@ const selectFollowedChannels = (state) => {
     return []
   }
 }
-const mSTP = (state) => {
+const mSTP = (state,ownProps) => {
   // console.log(state)
   return {
+  ownProps: ownProps,
   follows: selectFollowedChannels(state),
-  darkTheme: state.ui.ui_state.dark_theme
+  darkTheme: state.ui.ui_state.dark_theme,
+
+
 }}
 
 // const mDTP = dispatch => ({
@@ -22,4 +25,4 @@ const mSTP = (state) => {
 // })
 
 
-export default connect(mSTP,null)(SideBarIndex)
+export default withRouter(connect(mSTP,null)(SideBarIndex))

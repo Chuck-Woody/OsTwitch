@@ -7,7 +7,7 @@ import {Link} from 'react-router-dom'
 class SideBarIndex extends React.Component {
   constructor(props){
     super(props)
-    // console.log('The sidebar index component has', this.props)
+    console.log('The sidebar index component has', this.props)
   }
 
   componentDidMount(){
@@ -16,12 +16,10 @@ class SideBarIndex extends React.Component {
   }
   render() {
     let {darkTheme} = this.props
-
-    return (
-      <div className={`left-container channel-container ${darkTheme ? 'dark-theme': 'light-theme'}`} >
-        <div className='channel-header-container'>
+    let normalSidebar = ( 
+      <div className='channel-header-container'>
           <h2 className='channel-header-text'>Followed Channels</h2>
-        </div>
+        
 
         {Object.values(this.props.follows).map(follow => (
           <Link to={`/channel/${follow.id}`}>
@@ -42,6 +40,12 @@ class SideBarIndex extends React.Component {
             <div className={`channel-category ${darkTheme ? 'dark-theme' : 'light-theme'}`}>Category</div>
           </div>
         </div>
+        </div>
+    )
+
+    return (
+      <div className={`left-container channel-container ${darkTheme ? 'dark-theme': 'light-theme'}`} >
+          {/* {normalSidebar} */}
         
       </div>
       
