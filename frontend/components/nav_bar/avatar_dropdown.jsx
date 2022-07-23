@@ -5,8 +5,8 @@ function AvatarDropDown(props) {
   console.log("avatar dropdown props:",props)
   let dropDownItems;
   let {darkTheme} = props
-  console.log(props.currentUserId)
-  console.log("i hate react and frontend engineering", props.channelInfo[props.currentUserId])
+ 
+
   if (props.currentUserId) {
     dropDownItems = (
       <ul className={`dropdown ${darkTheme ? 'dark-theme' : 'light-theme'}`}>

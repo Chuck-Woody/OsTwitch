@@ -8,8 +8,9 @@ import LoginFormContainer from '../session_form/login_form_container';
 import SignupFormContainer from '../session_form/signup_form_container';
 import AvatarDropDown from '../nav_bar/avatar_dropdown';
 import { logout } from '../../actions/session_actions';
+import { fetchChannels } from '../../actions/channel_actions';
 
-function Modal({modal,toggleDark,openModal, closeModal,currentUserId,darkTheme,logout,channelInfo}) {
+function Modal({fetchChannels, modal,toggleDark,openModal, closeModal,currentUserId,darkTheme,logout,channelInfo}) {
   if (!modal) {
     return null;
   }
@@ -26,7 +27,9 @@ function Modal({modal,toggleDark,openModal, closeModal,currentUserId,darkTheme,l
       break;
     case 'avatar':
       // console.log('the modal should display the AvatarDropDown')
-      component = <AvatarDropDown channelInfo={channelInfo} logout={logout} openModal={openModal} darkTheme={darkTheme} currentUserId={currentUserId} modal={modal} closeModal={closeModal} toggleDark={toggleDark} />
+      fetchChannels().then(
+      component = <AvatarDropDown fetchChannels={fetchChannels} channelInfo={channelInfo} logout={logout} openModal={openModal} darkTheme={darkTheme} currentUserId={currentUserId} modal={modal} closeModal={closeModal} toggleDark={toggleDark} />
+      )
       break;
     default:
       return null;
@@ -50,6 +53,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
+    fetchChannels: () => dispatch(fetchChannels()),
     closeModal: () => dispatch(closeModal()),
     toggleDark: () => dispatch(toggleDark()),
     openModal: (modal) => dispatch(openModal(modal)),
