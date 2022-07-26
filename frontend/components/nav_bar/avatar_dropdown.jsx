@@ -2,17 +2,9 @@ import React from "react";
 import DarkThemeSlider from './dark_slider'
 
 function AvatarDropDown(props) {
-  console.log("avatar dropdown props:",props)
   let dropDownItems;
   let {darkTheme} = props
-  let channelName
-   if (props.channelInfo[props.currentUserId] === undefined){
-    props.fetchChannels()
-    channelName = props.channelInfo[props.currentUserId].channel_name
-   } else {
-    console.log(`The thing exists ${props.channelInfo[props.currentUserId].channel_name}`)
-
-   }
+  
 
 
   if (props.currentUserId ) {
@@ -29,7 +21,7 @@ function AvatarDropDown(props) {
           <div className="channel-info-container">
             
             <div className='channel-name'>
-              {channelName}
+              {props.users[props.currentUserId].username}
             </div>
           </div>
         </li>

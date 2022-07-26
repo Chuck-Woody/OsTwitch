@@ -10,7 +10,7 @@ import AvatarDropDown from '../nav_bar/avatar_dropdown';
 import { logout } from '../../actions/session_actions';
 import { fetchChannels } from '../../actions/channel_actions';
 
-function Modal({fetchChannels, modal,toggleDark,openModal, closeModal,currentUserId,darkTheme,logout,channelInfo}) {
+function Modal({users, modal,toggleDark,openModal, closeModal,currentUserId,darkTheme,logout,channelInfo}) {
   if (!modal) {
     return null;
   }
@@ -26,10 +26,7 @@ function Modal({fetchChannels, modal,toggleDark,openModal, closeModal,currentUse
       component = <SignupFormContainer darkTheme={darkTheme} modal={modal} closeModal={closeModal}/>;
       break;
     case 'avatar':
-      console.log('the modal should display the AvatarDropDown')
-      
-      component = <AvatarDropDown fetchChannels={fetchChannels} channelInfo={channelInfo} logout={logout} openModal={openModal} darkTheme={darkTheme} currentUserId={currentUserId} modal={modal} closeModal={closeModal} toggleDark={toggleDark} />
-      
+      component = <AvatarDropDown users={users} channelInfo={channelInfo} logout={logout} openModal={openModal} darkTheme={darkTheme} currentUserId={currentUserId} modal={modal} git acloseModal={closeModal} toggleDark={toggleDark} />
       break;
     default:
       return null;
@@ -47,7 +44,8 @@ const mapStateToProps = state => {
     modal: state.ui.modal,
     currentUserId: state.session.currentUserId,
     darkTheme: state.ui.ui_state.dark_theme,
-    channelInfo: state.entities.channels
+    channelInfo: state.entities.channels,
+    users: state.entities.users
   };
 };
 
