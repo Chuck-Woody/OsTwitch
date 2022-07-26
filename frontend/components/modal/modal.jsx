@@ -26,7 +26,7 @@ function Modal({users, modal,toggleDark,openModal, closeModal,currentUserId,dark
       component = <SignupFormContainer darkTheme={darkTheme} modal={modal} closeModal={closeModal}/>;
       break;
     case 'avatar':
-      component = <AvatarDropDown users={users} channelInfo={channelInfo} logout={logout} openModal={openModal} darkTheme={darkTheme} currentUserId={currentUserId} modal={modal} git acloseModal={closeModal} toggleDark={toggleDark} />
+      component = <AvatarDropDown users={users} channelInfo={channelInfo} logout={logout} openModal={openModal} darkTheme={darkTheme} currentUserId={currentUserId} modal={modal} closeModal={closeModal} toggleDark={toggleDark} />
       break;
     default:
       return null;
