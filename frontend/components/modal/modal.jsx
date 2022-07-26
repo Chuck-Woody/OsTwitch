@@ -26,10 +26,10 @@ function Modal({fetchChannels, modal,toggleDark,openModal, closeModal,currentUse
       component = <SignupFormContainer darkTheme={darkTheme} modal={modal} closeModal={closeModal}/>;
       break;
     case 'avatar':
-      // console.log('the modal should display the AvatarDropDown')
-      fetchChannels().then(
+      console.log('the modal should display the AvatarDropDown')
+      
       component = <AvatarDropDown fetchChannels={fetchChannels} channelInfo={channelInfo} logout={logout} openModal={openModal} darkTheme={darkTheme} currentUserId={currentUserId} modal={modal} closeModal={closeModal} toggleDark={toggleDark} />
-      )
+      
       break;
     default:
       return null;

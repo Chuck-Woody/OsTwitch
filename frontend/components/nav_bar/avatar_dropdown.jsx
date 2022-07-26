@@ -5,9 +5,18 @@ function AvatarDropDown(props) {
   console.log("avatar dropdown props:",props)
   let dropDownItems;
   let {darkTheme} = props
- 
+  let channelName
+   if (props.channelInfo[props.currentUserId] === undefined){
+    props.fetchChannels()
+    channelName = props.channelInfo[props.currentUserId].channel_name
+   } else {
+    console.log(`The thing exists ${props.channelInfo[props.currentUserId].channel_name}`)
 
-  if (props.currentUserId) {
+   }
+
+
+  if (props.currentUserId ) {
+    
     dropDownItems = (
       <ul className={`dropdown ${darkTheme ? 'dark-theme' : 'light-theme'}`}>
 
@@ -19,7 +28,9 @@ function AvatarDropDown(props) {
           </div>
           <div className="channel-info-container">
             
-            <div className='channel-name'>{props.channelInfo[props.currentUserId].channel_name}</div>
+            <div className='channel-name'>
+              {channelName}
+            </div>
           </div>
         </li>
         <li id='borderline' className="avatar-box-underline"></li>

@@ -16,36 +16,54 @@ class SideBarIndex extends React.Component {
   }
   render() {
     let {darkTheme} = this.props
-    let normalSidebar = ( 
-      <div className='channel-header-container'>
-          <h2 className='channel-header-text'>Followed Channels</h2>
-        
-
-        {Object.values(this.props.follows).map(follow => (
-          <Link to={`/channel/${follow.id}`}>
-            <SideBarIndexItem follow={follow}/>
-          </Link>
-        ))}
-         
-
-        <div className='channel-header-container'>
-          <h2 className='channel-header-text'>Recommended Channels</h2>
-        </div>
-        <div className={`channel-item-container ${darkTheme ? 'dark-theme' : 'light-theme'}`}> {/* These will eventually be replaced with a React Component called SideBarItem*/}
-          <div className="avatar-container">
-            <img className="channel-logo" src="https://robohash.org/placeholder2.png"></img>
+    let normalSidebar;
+    let pathname = `${this.props.ownProps.location.pathname}`
+    if (/channel\/[0-9]\/edit/.test(pathname)) {
+      normalSidebar = (
+        <div>
+          <div className='channel-header-container'>
+              <h2 className='channel-header-text'>Home</h2>
           </div>
-          <div className="channel-info-container">
-            <div className={`channel-name ${darkTheme ? 'dark-theme' : 'light-theme'}`}>Channel-Name</div>
-            <div className={`channel-category ${darkTheme ? 'dark-theme' : 'light-theme'}`}>Category</div>
+
+          <div className='channel-header-container'>
+              <h2 className='channel-header-text'>Content</h2>
           </div>
         </div>
-        </div>
-    )
+      )
+      
+    } else {
+
+      normalSidebar = ( 
+         <div className='channel-header-container'>
+             <h2 className='channel-header-text'>Followed Channels</h2>
+           
+   
+           {Object.values(this.props.follows).map(follow => (
+             <Link to={`/channel/${follow.id}`}>
+               <SideBarIndexItem follow={follow}/>
+             </Link>
+           ))}
+            
+   
+           <div className='channel-header-container'>
+             <h2 className='channel-header-text'>Recommended Channels</h2>
+           </div>
+           <div className={`channel-item-container ${darkTheme ? 'dark-theme' : 'light-theme'}`}> {/* These will eventually be replaced with a React Component called SideBarItem*/}
+             <div className="avatar-container">
+               <img className="channel-logo" src="https://robohash.org/placeholder2.png"></img>
+             </div>
+             <div className="channel-info-container">
+               <div className={`channel-name ${darkTheme ? 'dark-theme' : 'light-theme'}`}>Channel-Name</div>
+               <div className={`channel-category ${darkTheme ? 'dark-theme' : 'light-theme'}`}>Category</div>
+             </div>
+           </div>
+           </div>
+       )
+    }
 
     return (
       <div className={`left-container channel-container ${darkTheme ? 'dark-theme': 'light-theme'}`} >
-          {/* {normalSidebar} */}
+          {normalSidebar}
         
       </div>
       

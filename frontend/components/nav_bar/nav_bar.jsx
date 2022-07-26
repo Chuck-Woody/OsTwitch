@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import logo from '../../../app/assets/images/Logo/OsTwitch-logos_transparent.png'
+import { fetchChannels } from "../../util/channel_api_util";
 import AvatarDropDownIcon from './avatar_dropdown_icon'
 
 class NavBar extends React.Component {
@@ -21,13 +22,13 @@ class NavBar extends React.Component {
         {/* <button className={`nav-bar-logout-btn ${darkTheme ? `dark-theme` : `light-theme`}` } onClick={() => this.props.logout()}>Log Out</button>
         <img className="home-index-channel-logo" src={`https://robohash.org/${this.props.userInfo.username}.png`}></img>
         <div> Welcome {this.props.userInfo.username} </div> */}
-         <AvatarDropDownIcon currentUser={this.props.currentUser}  openModal={this.props.openModal}/>
+         <AvatarDropDownIcon fetchChannels={fetchChannels} currentUser={this.props.currentUser}  openModal={this.props.openModal}/>
       </div>)
     } else {
       buttonsLoggedIn = (<div className="modal-initiation-button-wrapper">
         <button className={`nav-bar-login-btn ${darkTheme ? `dark-theme` : `light-theme`}`} onClick={() => this.props.openModal('login')}>Log In</button>
         <button className={`nav-bar-signup-btn ${darkTheme ? `dark-theme` : `light-theme`}`} onClick={() => this.props.openModal('signup')}> Sign Up</button>
-        <AvatarDropDownIcon currentUser={this.props.currentUser}  openModal={this.props.openModal}/>
+        <AvatarDropDownIcon fetchChannels={fetchChannels} currentUser={this.props.currentUser}  openModal={this.props.openModal}/>
       </div>)
      
     }
