@@ -7,7 +7,7 @@ class ChannelEdit extends React.Component {
   }
 
   render() {
-
+    console.log(`props for the ChannelEdit are ${this.props}`)
 
     return (
 

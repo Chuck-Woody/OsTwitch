@@ -2,6 +2,8 @@
   
 <% if logged_in? %>
      <script>
+        
+
         window.currentUser = <%= render(
             'api/users/user.json.jbuilder', # this is a partial reference to api/users/_user.json.jbuilder
             user: current_user
