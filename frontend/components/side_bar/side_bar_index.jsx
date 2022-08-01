@@ -7,7 +7,7 @@ import {Link} from 'react-router-dom'
 class SideBarIndex extends React.Component {
   constructor(props){
     super(props)
-    console.log('The sidebar index component has', this.props)
+    // console.log('The sidebar index component has', this.props)
   }
 
   componentDidMount(){
