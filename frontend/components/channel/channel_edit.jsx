@@ -24,7 +24,6 @@ class ChannelEdit extends React.Component {
               {Object.values(this.props.allChannels)} followers
             </div>
             <div className="channel-description">
-              {Object.values(this.props.allChannels)}
             </div>
           </div>
       </div>
