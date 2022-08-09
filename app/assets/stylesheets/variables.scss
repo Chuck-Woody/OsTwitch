@@ -6,13 +6,13 @@ $twitch-text: "Inter","Roobert","Helvetica Neue",Helvetica,Arial,sans-serif;
 $black: black;
 $red: red;
 $white: #ffffff;
-$twitch-purple: #772ce8;
-$twitch-light-purple: #9147ff;
-$twitch-deep-purple:  #300c67;
+$twitch-purple: rgb(119, 44, 232);
+$twitch-light-purple: rgb(145, 71, 255);
+$twitch-deep-purple:  rgb(49, 12, 105);
 
 
-$twitch-logo-purple: #9147ff;
-$intra-page-purple-text: #5c2cd4;
+$twitch-logo-purple: rgb(145, 71, 255);
+$intra-page-purple-text: rgb(92, 44, 212);
 // light theme
 $light-theme-nav-bar: #ffffff;
 $light-theme-nav-bar-text: #0e0e10;
@@ -31,7 +31,7 @@ $light-theme-channel-text: #6c6298;
 
 $light-theme-modal-background: #ffffff;
 $light-theme-modal-text: #0e0e10;
-$light-theme-modal-button-text: #5c16c5;
+$light-theme-modal-button-text: rgb(92, 22, 197);
 
 $light-theme-login-btn-background: #f2f2f2;
 $light-theme-login-btn-background-hover: #e5e5e5;

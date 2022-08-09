@@ -1,3 +1,20 @@
 // Place all the styles related to the channels controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import 'variables.scss';
+
+.preview-toggle {
+  font-family: $twitch-text;
+  font-size: 13px;
+  color: $light-theme-modal-button-text;
+  border: none;
+  background: none;
+}
+
+.preview-toggle:hover {
+  font-family: $twitch-text;
+  font-size: 13px;
+  color: $light-theme-modal-button-text;
+  border: none;
+  background: none;
+}

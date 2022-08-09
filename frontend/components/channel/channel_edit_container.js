@@ -7,8 +7,8 @@ import {fetchChannels} from '../../actions/channel_actions'
 
 
 const mSTP = (state,ownProps) => {
-  console.log('the channel edit container is passing down own props' , JSON.stringify(ownProps))
-  console.log('the channel edit container is passing down state' , JSON.stringify(state))
+  // console.log('the channel edit container is passing down own props' , JSON.stringify(ownProps))
+  // console.log('the channel edit container is passing down state' , JSON.stringify(state))
 
   return {
     currentUser: state.session.currentUserId,
