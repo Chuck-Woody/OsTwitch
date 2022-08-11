@@ -3,18 +3,55 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import 'variables.scss';
 
+.preview-toggle-button-container {
+  display: flex;
+  justify-content: right;
+}
+
 .preview-toggle {
   font-family: $twitch-text;
   font-size: 13px;
   color: $light-theme-modal-button-text;
   border: none;
   background: none;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  height: 30px;
+  text-align: center;
+  padding-top: 4px;
 }
 
-.preview-toggle:hover {
-  font-family: $twitch-text;
-  font-size: 13px;
-  color: $light-theme-modal-button-text;
-  border: none;
-  background: none;
+.preview-toggle.light-theme:hover {
+  background: $light-theme-login-btn-background-hover;
+  color: $light-theme-modal-text;
+}
+
+.preview-toggle.dark-theme:hover {
+  background: $dark-theme-login-btn-background-hover;
+  color: $white;
+}
+
+.channel-edit-background {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.channel-edit-background.light-theme {
+  background: $light-theme-page-background;
+}
+
+.channel-edit-background.dark-theme {
+  background: $dark-theme-page-background;
+}
+
+.channel-about-background {
+  border-radius: 4px;
+}
+
+.understream-about-preview {
+  width: 100%;
+  margin-left: 10%;
+margin-top: 5%;
 }
