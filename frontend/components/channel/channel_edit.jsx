@@ -15,11 +15,11 @@ class ChannelEdit extends React.Component {
     console.log(Object.values(this.props.allChannels))
     return (
       <div className={ `${darkTheme ? 'dark-theme': 'light-theme'} channel-edit-background`}>
-            <div className='preview-toggle-button-container'>
-              <button className={`${darkTheme ? 'dark-theme': 'light-theme'} preview-toggle`} >
-                Show Preview
-              </button>
-            </div>
+        <div className='preview-toggle-button-container'>
+          <button className={`${darkTheme ? 'dark-theme': 'light-theme'} preview-toggle`} >
+            Show Preview
+          </button>
+        </div>
         <div className="understream-about-preview">
           <div className={` ${darkTheme ? 'dark-theme' : 'light-theme'} channel-about-background`}>
             <div className="about-streamer">
