@@ -50,6 +50,39 @@ class ChannelEdit extends React.Component {
           <h3 className="profile-settings-header">Profile Settings</h3>
           <div className="profile-settings-underheader">Change identifying details for your account</div>
         </div>
+
+        <div className="profile-form-container">
+          <div className="form-container">
+            <form action="">
+              <div className="channel-edit-username-container">
+                Username
+                <input className='channel-edit-username' type="text" placeholder='Change your Username' /> 
+                <div className="username-update-instructions">
+                  You may update your username 
+                </div>
+              </div>
+              <div className="channel-edit-channel-description-container">
+                Channel Description
+                <input className='channel-edit-channel-description' type="text" placeholder='Change your Channel Description' />
+                <div className="channel-description-update-instructions">
+                  You may update your Channel Description
+                </div>
+              </div>
+              <div className="channel-edit-stream-title-container">
+                Stream Title
+                <input className='channel-edit-stream-title' type="text" placeholder='Change your Stream Title' />
+                <div className="stream-title-update-instructions">
+                  You may update your Stream Title
+                </div>
+              </div>
+              <div className="channel-edit-save-changes-container">
+                <input className='channel-edit-username' type="submit" value='Save Changes' />  
+              </div>
+            </form>
+          </div>
+        </div> 
+
+
       </div>
     )
   }
